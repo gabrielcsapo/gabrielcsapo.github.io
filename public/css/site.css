@@ -1,0 +1,9 @@
+@import url('chemical.css');
+
+.chemical-header-nav-right > a {
+	text-decoration: none;
+}
+
+.chemical-header * {
+	font-weight: 300 !important;
+}
