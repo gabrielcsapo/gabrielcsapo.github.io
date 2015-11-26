@@ -3,20 +3,41 @@
 <head>
 	<title>Gabriel J. Csapo</title>
 	<link rel="stylesheet" type="text/css" href="/css/site.css">
-	<script type="text/javascript" src="/js/jquery.js"></script>
-	<script type="text/javascript" src="/application/application.js"></script>
+	<link rel="stylesheet" type="text/css" href="/lib/font-awesome/css/font-awesome.css">
+	<script type="text/javascript" src="/lib/jquery.js"></script>
+	<script type="text/javascript" src="/js/application.js"></script>
 </head>
 <body>
-	<div class="chemical-header fixed">
+	<div class="chemical-header fixed" style="height: auto;border: 1px solid #dedede;width: 75%;top: 35%;margin-left: 10%;padding:20px;border-radius:5px;">
 		<div class="container">
-			<h3 style="width:auto;">
-			<div class="chemical-header-title">
-				Gabriel J. Csapo
+			<div class="chemical-grid" style="text-align:center;">
+				<div class="chemical-col-12-12">
+					<h3 class="chemical-header-title" style="padding:15px;font-size:30px;">Gabriel J. Csapo</h3>
+				</div>
+				<div class="chemical-col-4-12">
+					<a href="https://www.google.com/maps/place/San+Jose,+CA/@37.296787,-122.3778534,9z/data=!3m1!4b1!4m2!3m1!1s0x808fcae48af93ff5:0xb99d8c0aca9f717b" class="font-link">
+						<i class="fa fa-2x fa-location-arrow"></i>
+						&nbsp;&nbsp;
+						San Jose
+					</a>
+				</div>
+				<div class="chemical-col-4-12">
+					<a href="www.paypal.com" class="font-link">
+						<i class="fa fa-2x fa-briefcase" style="color:black;"></i>
+					&nbsp;&nbsp;
+						PayPal
+					</a>
+				</div>
+				<div class="chemical-col-4-12">
+					<a href="https://github.com/gabrielcsapo" class="font-link">
+						<i class="fa fa-2x fa-github-square"></i>
+					</a>
+					&nbsp;&nbsp;
+					<a href="https://www.linkedin.com/in/gabrielcsapo" class="font-link">
+						<i class="fa fa-2x fa-linkedin-square"></i>
+					</a>
+				</div>
 			</div>
-			<div class="chemical-header-nav-right">
-				<a href="#resume" class="chemical-button">Resume</a>
-			</div>
-			</h3>
 		</div>
 	</div>
 </body>

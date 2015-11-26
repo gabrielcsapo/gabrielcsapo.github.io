@@ -7,3 +7,8 @@
 .chemical-header * {
 	font-weight: 300 !important;
 }
+
+.font-link {
+	color: black !important;
+	text-decoration: none; 
+}
