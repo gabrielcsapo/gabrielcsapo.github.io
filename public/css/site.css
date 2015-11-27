@@ -1,14 +1,64 @@
-@import url('chemical.css');
-
-.chemical-header-nav-right > a {
-	text-decoration: none;
+* {
+    font-family: 'Open Sans', sans-serif;
 }
-
-.chemical-header * {
-	font-weight: 300 !important;
+svg {
+  top: 0;
+  z-index: 100000;
 }
-
-.font-link {
-	color: black !important;
-	text-decoration: none; 
+.gridCircle {
+  fill: rgba(205, 205, 205, 0) !important;
+  stroke: rgba(205, 205, 205, 0.31) !important;
+  fill-opacity: 0.1; 
+  filter: url("#glow");
+}
+.container {
+  margin-top: 5%;
+  margin-bottom: 20px;
+}
+.nav {
+  text-align: center;
+}
+.nav > * {
+  color: rgba(85, 85, 85, 0.86);;
+}
+.nav > * > * {
+  color: rgba(85, 85, 85, 0.86);;
+}
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+  .nav-list {
+    margin-bottom:0px !important;
+  }
+  .nav {
+    margin: 0px; 
+    padding: 0px; 
+    bottom: 0px !important; 
+    position: absolute; 
+    width:100%;
+  }
+  .container-group {
+    height:650px;
+  }
+}
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+  .nav-list {
+    margin-bottom:0px !important;
+  }
+  .nav {
+    margin: 0px; 
+    padding: 0px; 
+    bottom: 0px !important; 
+    position: absolute; 
+    width:100%;
+  }
+  .container-group {
+    height:650px;
+  }
+}
 }

@@ -1,44 +1,58 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Gabriel J. Csapo</title>
-	<link rel="stylesheet" type="text/css" href="/css/site.css">
-	<link rel="stylesheet" type="text/css" href="/lib/font-awesome/css/font-awesome.css">
-	<script type="text/javascript" src="/lib/jquery.js"></script>
-	<script type="text/javascript" src="/js/application.js"></script>
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/lib/font-awesome/css/font-awesome.css">
+  <script src="/lib/d3.js"></script>
+  <title>Gabriel J. Csapo</title>
 </head>
 <body>
-	<div class="chemical-header fixed" style="height: auto;border: 1px solid #dedede;width: 75%;top: 35%;margin-left: 10%;padding:20px;border-radius:5px;">
-		<div class="container">
-			<div class="chemical-grid" style="text-align:center;">
-				<div class="chemical-col-12-12">
-					<h3 class="chemical-header-title" style="padding:15px;font-size:30px;">Gabriel J. Csapo</h3>
-				</div>
-				<div class="chemical-col-4-12">
-					<a href="https://www.google.com/maps/place/San+Jose,+CA/@37.296787,-122.3778534,9z/data=!3m1!4b1!4m2!3m1!1s0x808fcae48af93ff5:0xb99d8c0aca9f717b" class="font-link">
-						<i class="fa fa-2x fa-location-arrow"></i>
-						&nbsp;&nbsp;
-						San Jose
-					</a>
-				</div>
-				<div class="chemical-col-4-12">
-					<a href="www.paypal.com" class="font-link">
-						<i class="fa fa-2x fa-briefcase" style="color:black;"></i>
-					&nbsp;&nbsp;
-						PayPal
-					</a>
-				</div>
-				<div class="chemical-col-4-12">
-					<a href="https://github.com/gabrielcsapo" class="font-link">
-						<i class="fa fa-2x fa-github-square"></i>
-					</a>
-					&nbsp;&nbsp;
-					<a href="https://www.linkedin.com/in/gabrielcsapo" class="font-link">
-						<i class="fa fa-2x fa-linkedin-square"></i>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 container-group" style="background-image:url('https://scontent-lax3-1.cdninstagram.com/hphotos-xpa1/t51.2885-15/e35/10549833_1727260620841051_270037565_n.jpg');
+    height: 650px;background-size: cover;background-position:70% 20%;border-radius: 5px;">
+    </div>
+        <div class="col-md-8 col-xs-12 container-group">
+           <div class="header">
+                <h1 style="font-weight:100 !important;">Gabriel J. Csapo</h1>
+                <h4 style="font-weight:100 !important;">Web Developer</h4>
+                <span style="font-style:italic;">Solving the issues that truly matter, finding them is the hardest part.</span>
+           </div>
+           <br>
+           <br>
+           <div class="graph"></div>
+           <div class="nav">
+              <div class="col-md-4 col-xs-4 nav-list">
+                <a href="https://www.paypal.com" class="font-link">
+                  <i class="fa fa-2x fa-briefcase"></i>
+                &nbsp;&nbsp;
+                  PayPal
+                </a>
+              </div>
+              <div class="col-md-4 col-xs-4 nav-list">
+                <a href="https://www.google.com/maps/place/San+Jose,+CA/@37.296787,-122.3778534,9z/data=!3m1!4b1!4m2!3m1!1s0x808fcae48af93ff5:0xb99d8c0aca9f717b" class="font-link">
+            <i class="fa fa-2x fa-location-arrow"></i>
+            &nbsp;&nbsp;
+            San Jose
+          </a>
+              </div>
+              <div class="col-md-4 col-xs-4 nav-list">
+              <a href="https://github.com/gabrielcsapo" class="font-link">
+            <i class="fa fa-2x fa-github-square"></i>
+          </a>
+          &nbsp;&nbsp;
+          <a href="https://www.linkedin.com/in/gabrielcsapo" class="font-link">
+            <i class="fa fa-2x fa-linkedin-square"></i>
+          </a>
+              </div>
+          </div>
+        </div>
+    </div>   
+</div>
+<script src="/js/go.js"></script>
+<script src="/js/application.js"></script>
 </body>
 </html>
