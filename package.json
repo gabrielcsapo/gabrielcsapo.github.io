@@ -11,10 +11,9 @@
   "dependencies": {
     "body-parser": "^1.14.1",
     "compression": "^1.6.0",
-    "consolidate": "^0.13.1",
-    "dustjs-linkedin": "^2.7.2",
     "express": "^4.13.3",
     "express-session": "^1.12.1",
+    "jade": "^1.11.0",
     "lowdb": "^0.10.2",
     "moment": "^2.10.6",
     "response-time": "^2.3.1",
