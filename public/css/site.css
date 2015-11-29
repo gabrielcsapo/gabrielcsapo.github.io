@@ -6,7 +6,6 @@ html {
 }
 .profile-pictures {
   background-image:url('https://scontent-lax3-1.cdninstagram.com/hphotos-xpa1/t51.2885-15/e35/10549833_1727260620841051_270037565_n.jpg');
-  height: 350px;
   background-size: cover;
   background-position:70% 20%;
   border-radius: 5px;
@@ -20,6 +19,12 @@ html {
 .nav > * > * {
   color: rgba(85, 85, 85, 0.86);
 }
+.nav > * > * > * {
+  color: rgba(85, 85, 85, 0.86);
+}
+.nav-list {
+  text-align: center;
+}
 .font-link {
   font-size: 10px;
 }
@@ -28,11 +33,60 @@ html {
   justify-content: center;
   height: 100% !important;
 }
+.header {
+  padding-bottom:10px;
+}
 .inner-container {
   width:100%;
   align-self: center;
 }
+.nav-posts-parent {
+  text-align:center;
+  margin-bottom:10px;
+}
+@media only screen and (min-width: 480px) and (min-height: 320px) {
+  .profile-pictures {
+    height: 100px !important;
+    background-position: 80% 30% !important;
+  }
+}
+@media only screen and (min-width: 568px) and (min-height: 320px) {
+  .profile-pictures {
+    height: 100px !important;
+    background-position: 80% 30%;
+  }
+  .font-link {
+    font-size:10px;
+  }
+  .nav-list {
+    width:100%;
+    text-align: center !important;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .profile-pictures {
+    height: 200px;
+  }
+  .header {
+    padding-bottom:20px;
+  }
+  .nav-list {
+    width:100%;
+    text-align: left !important;
+  }
+  .nav-posts {
+    position: absolute;
+    bottom: 0px;
+    font-size: 15px !important;
+  }
+  .font-link {
+    font-size:10px;
+  }
+}
 @media only screen and (min-width: 992px) {
+  .profile-pictures {
+    height: 650px !important;
+  }
   .font-link {
     font-size:14px;
   }
@@ -58,5 +112,13 @@ html {
     stroke: rgba(205, 205, 205, 0.31) !important;
     fill-opacity: 0.1; 
     filter: url("#glow");
+  }
+}
+@media only screen and (min-width: 1336px) {
+  .profile-pictures {
+    height: 575px !important;
+  }
+  .container-group {
+    height: 575px;
   }
 }

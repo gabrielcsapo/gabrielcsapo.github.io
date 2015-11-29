@@ -42,6 +42,12 @@ var hashChanged = function() {
     var hash = location.hash.slice(1);
     if(hash == "posts") {
         $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+    } else if (hash == "top") {
+        $("html, body").animate({ scrollTop: 2 }, "slow", function() {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 800);
+        });
     }
 }
 
