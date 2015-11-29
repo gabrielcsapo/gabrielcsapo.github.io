@@ -1,10 +1,10 @@
 var margin = {
     top: 45,
-    right: 0,
+    right: 50,
     bottom: 65,
-    left: 0
+    left: 50
 };
-var width = 775;
+var width = 400;
 var height = 300;
 
 var data = [
