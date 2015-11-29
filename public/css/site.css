@@ -6,7 +6,7 @@ html {
 }
 .profile-pictures {
   background-image:url('https://scontent-lax3-1.cdninstagram.com/hphotos-xpa1/t51.2885-15/e35/10549833_1727260620841051_270037565_n.jpg');
-  height: 300px;
+  height: 350px;
   background-size: cover;
   background-position:70% 20%;
   border-radius: 5px;
@@ -15,10 +15,13 @@ html {
   text-align: center;
 }
 .nav > * {
-  color: rgba(85, 85, 85, 0.86);;
+  color: rgba(85, 85, 85, 0.86);
 }
 .nav > * > * {
-  color: rgba(85, 85, 85, 0.86);;
+  color: rgba(85, 85, 85, 0.86);
+}
+.font-link {
+  font-size:10px;
 }
 .container {
   display: flex;
@@ -33,6 +36,9 @@ html {
   html, body {
     background-color: blue;
   } 
+  .font-link {
+    font-size:14px;
+  }
   .nav-list {
     margin-bottom:0px !important;
   }
