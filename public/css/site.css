@@ -2,7 +2,7 @@ html {
   overflow: hidden;
 }
 * {
-    font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 .profile-pictures {
   background-image:url('https://scontent-lax3-1.cdninstagram.com/hphotos-xpa1/t51.2885-15/e35/10549833_1727260620841051_270037565_n.jpg');
@@ -21,7 +21,7 @@ html {
   color: rgba(85, 85, 85, 0.86);
 }
 .font-link {
-  font-size:10px;
+  font-size: 10px;
 }
 .container {
   display: flex;
