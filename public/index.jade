@@ -14,7 +14,7 @@ html
 body
 	div.container
 		div.inner-container
-			div.col-md-4.container-group(style="background-image:url('https://scontent-lax3-1.cdninstagram.com/hphotos-xpa1/t51.2885-15/e35/10549833_1727260620841051_270037565_n.jpg');height: 650px;background-size: cover;background-position:70% 20%;border-radius: 5px;")
+			div.col-md-4.container-group.profile-pictures
 			div.col-md-8.col-xs-12.container-group
 				div.header
 					h1(style="font-weight:100 !important;") Gabriel J. Csapo
@@ -22,7 +22,7 @@ body
 					span(style="font-style:italic;") On a quest to find the problems that have true impact.
 				br
 				br
-				div.graph
+				div.graph.hidden-sm.hidden-xs
 				div.nav
 					div.col-md-4.col-xs-4.nav-list
 						a(href="https://www.paypal.com").font-link
@@ -36,15 +36,15 @@ body
 						| &nbsp;&nbsp;
 						a(href="https://www.linkedin.com/in/gabrielcsapo").font-link
 							i.fa.fa-2x.fa-linkedin-square
-			div.row(style="text-align:center")
-				div.col-md-12.nav
-					a(href="#posts")
-						i.fa.fa-2x.fa-arrow-circle-o-down(style="position:absolute;bottom:0;top:25px;")
+			div.row.nav
+				div(style="position:absolute;bottom:15px;width:93%;text-align:center;")
+						a(href="#posts")
+							i.fa.fa-2x.fa-arrow-circle-o-down
 
 	div.row(style="text-align:center")
-				div.col-md-12.nav
-					a(href="#")
-						i.fa.fa-2x.fa-arrow-circle-o-up(style="position:absolute;bottom:0;top:25px;")
+		div.col-md-12.nav
+			a(href="#")
+				i.fa.fa-2x.fa-arrow-circle-o-up(style="position:absolute;bottom:0;top:25px;")
 	div.container(style="text-align:center;")
 		div.inner-container
 			h3 No Posts Today

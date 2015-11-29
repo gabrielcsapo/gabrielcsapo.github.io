@@ -4,24 +4,12 @@ html {
 * {
     font-family: 'Open Sans', sans-serif;
 }
-svg {
-  top: 0;
-  z-index: 100000;
-}
-.gridCircle {
-  fill: rgba(205, 205, 205, 0) !important;
-  stroke: rgba(205, 205, 205, 0.31) !important;
-  fill-opacity: 0.1; 
-  filter: url("#glow");
-}
-.container {
-  display: flex;
-  justify-content: center;
-  height: 100% !important;
-}
-.inner-container {
-  width:100%;
-  align-self: center;
+.profile-pictures {
+  background-image:url('https://scontent-lax3-1.cdninstagram.com/hphotos-xpa1/t51.2885-15/e35/10549833_1727260620841051_270037565_n.jpg');
+  height: 300px;
+  background-size: cover;
+  background-position:70% 20%;
+  border-radius: 5px;
 }
 .nav {
   text-align: center;
@@ -32,10 +20,19 @@ svg {
 .nav > * > * {
   color: rgba(85, 85, 85, 0.86);;
 }
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
+.container {
+  display: flex;
+  justify-content: center;
+  height: 100% !important;
+}
+.inner-container {
+  width:100%;
+  align-self: center;
+}
+@media only screen and (min-width: 992px) {
+  html, body {
+    background-color: blue;
+  } 
   .nav-list {
     margin-bottom:0px !important;
   }
@@ -49,24 +46,14 @@ svg {
   .container-group {
     height:650px;
   }
-}
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-  .nav-list {
-    margin-bottom:0px !important;
+  svg {
+    top: 0;
+    z-index: 100000;
   }
-  .nav {
-    margin: 0px; 
-    padding: 0px; 
-    bottom: 0px !important; 
-    position: absolute; 
-    width:100%;
+  .gridCircle {
+    fill: rgba(205, 205, 205, 0) !important;
+    stroke: rgba(205, 205, 205, 0.31) !important;
+    fill-opacity: 0.1; 
+    filter: url("#glow");
   }
-  .container-group {
-    height:650px;
-  }
-}
 }
