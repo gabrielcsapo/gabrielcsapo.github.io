@@ -9,14 +9,14 @@ var height = 300;
 
 var data = [
     [{
-        axis: "Life",
-        value: 0.20
+        axis: "Work",
+        value: 0.30
     }, {
         axis: "Programming",
-        value: 0.40
+        value: 0.35
     }, {
         axis: "Travel",
-        value: 0.30
+        value: 0.25
     }, {
         axis: "Writing",
         value: 0.10
@@ -37,3 +37,16 @@ var radarChartOptions = {
 };
 
 RadarChart('.graph', data, radarChartOptions);
+
+var hashChanged = function() {
+    var hash = location.hash.slice(1);
+    if(hash == "posts") {
+        $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+    }
+}
+
+$(window).on('hashchange',function(){ 
+    hashChanged();
+});
+
+hashChanged();
