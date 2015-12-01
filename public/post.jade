@@ -1,0 +1,13 @@
+html
+	head
+		meta(name="viewport" content="initial-scale=1.0, user-scalable=no")
+		title=post.title
+		style
+			include lib/github-markdown.css
+		style
+			include lib/font-awesome/css/font-awesome.css
+
+body.markdown-body(style="padding:40px;")
+	a(href="/#posts")
+		i.fa.fa-2x.fa-arrow-left
+	div!=post.content

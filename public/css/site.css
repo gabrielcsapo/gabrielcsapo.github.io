@@ -25,6 +25,19 @@ html {
 .nav-list {
   text-align: center;
 }
+.post {
+  margin:  0.25rem;
+  border:1px solid #edede;
+}
+.post, .post-img > img {
+  display: inline-block;
+  width:100%;
+  background:  #efefef;
+  height:250px;
+}
+.post > * {
+  font-weight: 100;
+}
 .font-link {
   font-size: 10px;
 }
