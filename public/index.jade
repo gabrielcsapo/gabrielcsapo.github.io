@@ -3,7 +3,11 @@ html
 		meta(name="viewport" content="initial-scale=1.0, user-scalable=no")
 		title Gabriel J. Csapo
 		style
-			include css/site.css
+			| html {
+			|  overflow: hidden;
+			|}
+		style
+			include css/index.css
 		style
 			include lib/bootstrap/css/bootstrap.min.css
 		style
@@ -35,33 +39,9 @@ body
 						| &nbsp;&nbsp;
 						a(href="https://www.linkedin.com/in/gabrielcsapo").font-link
 							i.fa.fa-2x.fa-linkedin-square
-
-	div.row.nav.nav-posts-parent
-		a(href="#posts").nav-posts.font-link
-			i.fa.fa-2x.fa-arrow-circle-o-down
-
-	div.row(style="text-align:center")
-		div.col-md-12.nav
-			a(href="#top")
-				i.fa.fa-2x.fa-arrow-circle-o-up(style="position:absolute;bottom:0;top:25px;")
-	div.container(style="text-align:center;")
-		div.inner-container(style="-moz-column-width: 16em;-webkit-column-width: 16em;-moz-column-gap: 1em;-webkit-column-gap: 1em;")
-			if posts
-				each post, index in posts
-					if(post.type == 'post')
-						div.post.post-content
-							a(href="/#{post.link}")
-								h4(style="margin-top:45%;font-weight:100") #{post.title}
-								small(style="width:85%;margin:0 auto") #{post.subtitle}
-
-					else
-						div.post.post-img
-							img(alt='#{post.title}', src='data:img/png;base64,#{post.src}')
-							small #{post.title}
-			else 
-				No Posts 
-
-
+						| &nbsp;&nbsp;
+						a(href="/articles").font-link
+							i.fa.fa-2x.fa-book &nbsp;Articles
 
 	script
 			include js/go.js
