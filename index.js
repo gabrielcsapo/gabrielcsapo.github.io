@@ -4,10 +4,11 @@ var express = require('express'),
 
 require('./lib/setup')(app, function() {
 
-	require('./routes')(app);
+    require('./routes')(app);
 
-	app.listen(port, function (err) {
-	    console.log('[%s] Listening on http://localhost:%d', app.settings.env, port);
-	});
+    app.listen(port, function(err) {
+        if (err) { throw err; }
+        console.log('[%s] Listening on http://localhost:%d', app.settings.env, port); // eslint-disable-line no-console
+    });
 
 });
