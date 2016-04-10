@@ -1,49 +1,28 @@
 html
-	head
-		meta(name="viewport" content="initial-scale=1.0, user-scalable=no")
-		title Gabriel J. Csapo
-		style
-			| html {
-			|  overflow: hidden;
-			|}
-		style
-			include css/index.css
-		style
-			include lib/bootstrap/css/bootstrap.min.css
-		style
-			include lib/font-awesome/css/font-awesome.css
-		script
-			include lib/jquery.js
-		script
-			include lib/d3.js
+    head
+        meta(name="viewport" content="initial-scale=1.0, user-scalable=no")
+        title Gabriel J. Csapo
+        style
+            include lib/bootstrap/css/bootstrap.min.css
+        style
+            include css/cover.css
+        style
+            include lib/font-awesome/css/font-awesome.css
 body
-	div.container
-		div.inner-container
-			div.col-md-4.container-group.profile-pictures
-			div.col-md-8.col-xs-12.container-group
-				div.header
-					h1(style="font-weight:100 !important;") Gabriel J. Csapo
-					h4(style="font-weight:100 !important;") Web Developer
-					span(style="font-style:italic;") On a quest to find the problems that have true impact.
-				div.graph.hidden-sm.hidden-xs
-				div.row.nav
-					div.col-md-4.col-sm-4.col-xs-12.nav-list
-						a(href="https://www.paypal.com").font-link
-							i.fa.fa-2x.fa-briefcase &nbsp;&nbsp; PayPal
-					div.col-md-4.col-sm-4.col-xs-12.nav-list
-						a(href="https://www.google.com/maps/place/San+Jose,+CA/@37.296787,-122.3778534,9z/data=!3m1!4b1!4m2!3m1!1s0x808fcae48af93ff5:0xb99d8c0aca9f717b").font-link
-							i.fa.fa-2x.fa-location-arrow &nbsp;&nbsp; San Jose
-					div.col-md-4.col-sm-4.col-xs-12.nav-list
-						a(href="https://github.com/gabrielcsapo").font-link
-							i.fa.fa-2x.fa-github-square
-						| &nbsp;&nbsp;
-						a(href="https://www.linkedin.com/in/gabrielcsapo").font-link
-							i.fa.fa-2x.fa-linkedin-square
-						| &nbsp;&nbsp;
-						a(href="/articles").font-link
-							i.fa.fa-2x.fa-book &nbsp;Articles
-
-	script
-			include js/go.js
-	script
-			include js/application.js
+    div(class="site-wrapper")
+        div(class="site-wrapper-inner")
+            div(class="cover-container")
+                div(class="masthead clearfix")
+                    div(class="inner")
+                        h3(class="masthead-brand") Gabriel Csapo
+            div(class="inner cover" style="background-color: #eeeeee;padding: 10px;margin: auto;position: absolute;top: 0;left: 0;bottom: 0;right: 0;height: 170px;")
+                h1(class="cover-heading" style="color: black") Yesterday does not impact today, today impacts tomorrow.
+                small  
+                div(class="lead" style="display:inline-block;") 
+                    div(style="bottom: 0;padding-bottom: 10px;position: absolute;left: 0;right: 0;margin: 0 auto;")
+                        a(class="btn btn-primary btn-sm" href="https://twitter.com/gabriel_csapo" target="_blank" style="margin-right:5px;")
+                            i(class="fa fa-twitter")
+                        a(class="btn btn-primary btn-sm" href="https://www.linkedin.com/in/gabrielcsapo" target="_blank" style="margin-right:5px;")
+                            i(class="fa fa-linkedin")
+                        a(class="btn btn-primary btn-sm" href="https://www.github.com/gabrielcsapo" target="_blank")
+                            i(class="fa fa-github")

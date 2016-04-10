@@ -14,10 +14,7 @@
     "express": "^4.13.3",
     "express-session": "^1.12.1",
     "jade": "^1.11.0",
-    "lowdb": "^0.10.2",
     "moment": "^2.10.6",
-    "response-time": "^2.3.1",
-    "serve-static": "^1.10.0",
-    "underscore-db": "^0.9.1"
+    "serve-static": "^1.10.0"
   }
 }
