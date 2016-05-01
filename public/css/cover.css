@@ -1,3 +1,9 @@
+@media (max-width: 480) {
+    .cover-heading {
+        font-size: 25px
+    }
+}
+
 * {
     font-weight: 200 !important;
     text-shadow: none !important;
