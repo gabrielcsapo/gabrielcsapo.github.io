@@ -1,20 +1,22 @@
 # [site](http://www.gabejc.com)
 
-> [screenshots](./screenshots)
-
 > personal website
 
-## install
+## Install
 
 ```
 npm install
 ```
 
-## usage
+## Usage
 
 ```
 node .
 ```
+
+## Example
+
+### [screenshots](./screenshots)
 
 ## Contributions
 

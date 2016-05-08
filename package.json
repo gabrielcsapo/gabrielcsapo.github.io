@@ -1,20 +1,24 @@
 {
-  "name": "website",
+  "name": "site",
   "version": "1.0.0",
   "description": "personal website",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {},
   "author": "Gabriel Csapo <gacsapo@paypalcorp.com>",
   "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.14.1",
-    "compression": "^1.6.0",
-    "express": "^4.13.3",
-    "grunt-screenshot": "^0.1.0",
-    "jade": "^1.11.0",
-    "serve-static": "^1.10.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielcsapo/site.git"
   },
+  "bugs": {
+    "url": "https://github.com/gabrielcsapo/site/issues"
+  },
+  "homepage": "https://github.com/gabrielcsapo/site#readme",
+  "dependencies": {},
   "devDependencies": {
-    "grunt": "^1.0.1"
+    "jade": "^1.11.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-pug": "^1.0.0",
+    "grunt-screenshot": "^0.1.0"
   }
 }
