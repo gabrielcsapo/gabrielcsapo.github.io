@@ -25,7 +25,7 @@ module.exports = function(grunt) {
                         port: 8000,
                         src: "index.html",
                         dest: "index.png",
-                        delay: 2000
+                        delay: 300
                     }],
                     viewport: ['1920x1080','1024x768','640x960','320x480']
                 }

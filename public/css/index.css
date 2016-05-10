@@ -1,0 +1,11 @@
+@media (max-width: 640) {
+    .quote-container {
+        height: 190px !important;
+    }
+}
+
+@media (max-width: 320) {
+    .quote-container {
+        height: 225px !important;
+    }
+}

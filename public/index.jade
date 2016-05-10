@@ -3,26 +3,36 @@ html
         meta(name="viewport" content="initial-scale=1.0, user-scalable=no")
         title Gabriel J. Csapo
         style
-            include lib/bootstrap/css/bootstrap.min.css
-        style
-            include css/cover.css
+            include ../node_modules/psychic-ui/psychic.css
         style
             include lib/font-awesome/css/font-awesome.css
+        style 
+            include css/index.css
+        style. 
+            @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
+            html, body {
+                font-family: 'Open Sans', sans-serif;
+                -webkit-text-size-adjust: 100%;
+                  -ms-text-size-adjust: 100%;
+                height: 100%;
+                background-image: url('public/assets/background.png');
+                background-size: cover;
+                background-position: 10% 50%;
+                border-radius: 5px;
+            }
 body
-    div(class="site-wrapper")
-        div(class="site-wrapper-inner")
-            div(class="cover-container")
-                div(class="masthead clearfix")
-                    div(class="inner")
-                        h3(class="masthead-brand") Gabriel Csapo
-            div(class="inner cover" style="background-color: #eeeeee;padding: 10px;margin: auto;position: absolute;top: 0;left: 0;bottom: 0;right: 0;height: 170px;")
-                h1(class="cover-heading" style="color: black") Yesterday does not impact today, today impacts tomorrow.
-                small  
-                div(class="lead" style="display:inline-block;") 
-                    div(style="bottom: 0;padding-bottom: 10px;position: absolute;left: 0;right: 0;margin: 0 auto;")
-                        a(class="btn btn-primary btn-sm" href="https://twitter.com/gabriel_csapo" target="_blank" style="margin-right:5px;")
-                            i(class="fa fa-twitter")
-                        a(class="btn btn-primary btn-sm" href="https://www.linkedin.com/in/gabrielcsapo" target="_blank" style="margin-right:5px;")
-                            i(class="fa fa-linkedin")
-                        a(class="btn btn-primary btn-sm" href="https://www.github.com/gabrielcsapo" target="_blank")
-                            i(class="fa fa-github")
+    div(class="navbar navbar-center")
+       div(class="container")
+           div(class="navbar-title")
+               span(class="text-white" style="font-weight:300") Gabriel Csapo
+
+    div(class="text-center", style="width:100%;position: absolute;top: 50%;transform: translateY(-50%);")
+        div(class="quote-container" style="background-color: #eeeeee;padding: 10px;margin: auto;position: absolute;top: 0;left: 0;bottom: 0;right: 0;height: 170px;")
+            h1(class="text-black" style="font-weight:100;") Yesterday does not impact today, today impacts tomorrow.
+            div
+                a(class="btn btn-black border-radius-100" href="https://twitter.com/gabriel_csapo" target="_blank" style="margin-right:5px;")
+                    i(class="fa fa-twitter")
+                a(class="btn btn-black border-radius-100" href="https://www.linkedin.com/in/gabrielcsapo" target="_blank" style="margin-right:5px;")
+                    i(class="fa fa-linkedin")
+                a(class="btn btn-black border-radius-100" href="https://www.github.com/gabrielcsapo" target="_blank")
+                    i(class="fa fa-github")
