@@ -14,10 +14,6 @@ npm install
 node .
 ```
 
-## Example
-
-### [screenshots](./screenshots)
-
 ## Contributions
 
 > all contributions are welcome and wanted!
