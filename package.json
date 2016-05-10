@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "personal website",
   "main": "index.html",
-  "scripts": {},
+  "scripts": {
+      "start": "node ."
+  },
   "author": "Gabriel Csapo <gacsapo@paypalcorp.com>",
   "license": "ISC",
   "repository": {

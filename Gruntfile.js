@@ -16,15 +16,15 @@ module.exports = function(grunt) {
           }
       },
         screenshot: {
-            site: {
+            index: {
                 options: {
-                    path: './screenshots',
+                    path: './screenshots/index',
                     files: [{
                         type: 'local',
                         path: '.',
                         port: 8000,
                         src: "index.html",
-                        dest: "main.png",
+                        dest: "index.png",
                         delay: 2000
                     }],
                     viewport: ['1920x1080','1024x768','640x960','320x480']

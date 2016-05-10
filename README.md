@@ -5,13 +5,13 @@
 ## Install
 
 ```
-npm install
+npm install;
 ```
 
 ## Usage
 
 ```
-node .
+npm start;
 ```
 
 ## Contributions
