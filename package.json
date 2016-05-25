@@ -4,7 +4,8 @@
   "description": "personal website",
   "main": "index.html",
   "scripts": {
-    "start": "node ."
+    "start": "node .",
+    "deploy": "git checkout master;git pull origin master;git checkout gh-pages;git pull origin master;git push origin gh-pages;git checkout master;"
   },
   "author": "Gabriel Csapo <gacsapo@paypalcorp.com>",
   "license": "ISC",
