@@ -2,6 +2,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-screenshot');
     grunt.loadNpmTasks('grunt-contrib-pug');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
 
     grunt.initConfig({
         pug: {
@@ -22,6 +23,16 @@ module.exports = function(grunt) {
                 tasks: ['pug'],
                 options: {
                     spawn: false,
+                }
+            }
+        },
+        imagemin: {
+            static: {
+                options: {
+                    optimizationLevel: 3
+                },
+                files: {
+                    'public/assets/background.png': 'public/assets/background-raw.png',
                 }
             }
         },
