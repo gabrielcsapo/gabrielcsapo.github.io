@@ -19,11 +19,11 @@
   "homepage": "https://github.com/gabrielcsapo/site#readme",
   "devDependencies": {
     "grunt": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-imagemin": "^1.0.1",
     "grunt-contrib-pug": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-screenshot": "^0.1.0",
-    "jade": "^1.11.0",
     "psychic-ui": "0.0.1"
   }
 }

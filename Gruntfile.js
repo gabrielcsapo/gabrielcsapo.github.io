@@ -1,5 +1,6 @@
 module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-screenshot');
+    grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-pug');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
@@ -36,6 +37,14 @@ module.exports = function(grunt) {
                 }
             }
         },
+        connect: {
+            server: {
+                options: {
+                    port: 8000,
+                    base: '.'
+                }
+            }
+        },
         screenshot: {
             index: {
                 options: {
@@ -54,6 +63,7 @@ module.exports = function(grunt) {
         }
     });
 
+    grunt.registerTask('dev', ['connect', 'watch']);
     grunt.registerTask('default', ['pug', 'screenshot']);
 
 };

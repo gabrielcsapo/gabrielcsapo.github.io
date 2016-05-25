@@ -2,6 +2,9 @@
 
 > personal website
 
+[![Dependency Status](https://david-dm.org/gabrielcsapo/site.svg)](https://david-dm.org/gabrielcsapo/site)
+[![devDependency Status](https://david-dm.org/gabrielcsapo/site/dev-status.svg)](https://david-dm.org/gabrielcsapo/site#info=devDependencies)
+
 ## Install
 
 ```
@@ -11,7 +14,8 @@ npm install;
 ## Usage
 
 ```
-npm start;
+grunt dev;
+open http://localhost:8000;
 ```
 
 ## Contributions
