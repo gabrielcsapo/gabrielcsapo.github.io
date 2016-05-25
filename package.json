@@ -1,27 +1,28 @@
 {
-    "name": "site",
-    "version": "1.0.0",
-    "description": "personal website",
-    "main": "index.html",
-    "scripts": {
-        "start": "node ."
-    },
-    "author": "Gabriel Csapo <gacsapo@paypalcorp.com>",
-    "license": "ISC",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/gabrielcsapo/site.git"
-    },
-    "bugs": {
-        "url": "https://github.com/gabrielcsapo/site/issues"
-    },
-    "homepage": "https://github.com/gabrielcsapo/site#readme",
-    "devDependencies": {
-        "grunt": "^1.0.1",
-        "grunt-contrib-pug": "^1.0.0",
-        "grunt-contrib-watch": "^1.0.0",
-        "grunt-screenshot": "^0.1.0",
-        "jade": "^1.11.0",
-        "psychic-ui": "0.0.1"
-    }
+  "name": "site",
+  "version": "1.0.0",
+  "description": "personal website",
+  "main": "index.html",
+  "scripts": {
+    "start": "node ."
+  },
+  "author": "Gabriel Csapo <gacsapo@paypalcorp.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielcsapo/site.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gabrielcsapo/site/issues"
+  },
+  "homepage": "https://github.com/gabrielcsapo/site#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-pug": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-screenshot": "^0.1.0",
+    "jade": "^1.11.0",
+    "psychic-ui": "0.0.1"
+  }
 }
