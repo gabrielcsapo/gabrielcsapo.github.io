@@ -1,10 +1,10 @@
 {
   "name": "site",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "personal website",
   "main": "index.html",
   "scripts": {
-    "start": "node .",
+    "start": "grunt dev",
     "deploy": "git checkout master;git pull origin master;git checkout gh-pages;git pull origin master;git push origin gh-pages;git checkout master;"
   },
   "author": "Gabriel Csapo <gacsapo@paypalcorp.com>",
