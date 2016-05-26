@@ -1,3 +1,12 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    height: 100%;
+    background-color: #d9d2c6;
+}
+
 @media (max-width: 640) {
     .quote-container {
         height: 190px !important;
@@ -6,6 +15,6 @@
 
 @media (max-width: 320) {
     .quote-container {
-        height: 225px !important;
+        height: 230px !important;
     }
 }

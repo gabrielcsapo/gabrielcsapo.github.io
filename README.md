@@ -1,6 +1,6 @@
 # [site](http://www.gabrielcsapo.com)
 
-> personal website
+> personal website (www.gabrielcsapo.com)
 
 [![Dependency Status](https://david-dm.org/gabrielcsapo/site.svg)](https://david-dm.org/gabrielcsapo/site)
 [![devDependency Status](https://david-dm.org/gabrielcsapo/site/dev-status.svg)](https://david-dm.org/gabrielcsapo/site#info=devDependencies)

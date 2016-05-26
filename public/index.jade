@@ -8,31 +8,27 @@ html
             include lib/font-awesome/css/font-awesome.css
         style 
             include css/index.css
-        style. 
-            @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
-            html, body {
-                font-family: 'Open Sans', sans-serif;
-                -webkit-text-size-adjust: 100%;
-                  -ms-text-size-adjust: 100%;
-                height: 100%;
-                background-image: url('public/assets/background.png');
-                background-size: cover;
-                background-position: 10% 50%;
-                border-radius: 5px;
-            }
 body
     div(class="navbar navbar-center")
        div(class="container")
            div(class="navbar-title")
-               span(class="text-white" style="font-weight:300") Gabriel Csapo
+               span(class="text-black" style="font-size:20px;font-weight:300") Gabriel Csapo
 
     div(class="text-center", style="width:100%;position: absolute;top: 50%;transform: translateY(-50%);")
-        div(class="quote-container" style="background-color: #eeeeee;padding: 10px;margin: auto;position: absolute;top: 0;left: 0;bottom: 0;right: 0;height: 170px;")
-            h1(class="text-black" style="font-weight:100;") Yesterday does not impact today, today impacts tomorrow.
-            div
-                a(class="btn btn-black border-radius-100" href="https://twitter.com/gabriel_csapo" target="_blank" style="margin-right:5px;")
-                    i(class="fa fa-twitter")
-                a(class="btn btn-black border-radius-100" href="https://www.linkedin.com/in/gabrielcsapo" target="_blank" style="margin-right:5px;")
-                    i(class="fa fa-linkedin")
-                a(class="btn btn-black border-radius-100" href="https://www.github.com/gabrielcsapo" target="_blank")
-                    i(class="fa fa-github")
+        div.grid
+            div.col-1-12
+            div.col-10-12
+                div(class="quote-container" style="background-color: #eeeeee;padding: 10px;margin: auto;position: absolute;top: 0;left: 0;bottom: 0;right: 0;height: 170px;")
+                    h1(class="text-black" style="font-weight:100;") Yesterday does not impact today, today impacts tomorrow.
+                    div
+                        a(class="btn btn-black border-radius-100" href="https://twitter.com/gabriel_csapo" target="_blank" style="margin-right:5px;")
+                            i(class="fa fa-twitter")
+                        a(class="btn btn-black border-radius-100" href="https://www.linkedin.com/in/gabrielcsapo" target="_blank" style="margin-right:5px;")
+                            i(class="fa fa-linkedin")
+                        a(class="btn btn-black border-radius-100" href="https://www.github.com/gabrielcsapo" target="_blank")
+                            i(class="fa fa-github")
+            div.col-1-12
+            
+    div(class="navbar navbar-center" style="position:fixed;bottom:0;")
+        div(class="container text-center") created with ♥ by 
+            a(href="https://www.github.com/gabrielcsapo" target="_blank") @gabrielcsapo
