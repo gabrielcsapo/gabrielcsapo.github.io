@@ -1,9 +1,9 @@
-# [site](http://www.gabrielcsapo.com)
+# [gabrielcsapo.com](http://www.gabrielcsapo.com)
 
 > personal website (www.gabrielcsapo.com)
 
-[![Dependency Status](https://david-dm.org/gabrielcsapo/site.svg)](https://david-dm.org/gabrielcsapo/site)
-[![devDependency Status](https://david-dm.org/gabrielcsapo/site/dev-status.svg)](https://david-dm.org/gabrielcsapo/site#info=devDependencies)
+[![Dependency Status](https://david-dm.org/gabrielcsapo/gabrielcsapo.com.svg)](https://david-dm.org/gabrielcsapo/gabrielcsapo.com)
+[![devDependency Status](https://david-dm.org/gabrielcsapo/gabrielcsapo.com/dev-status.svg)](https://david-dm.org/gabrielcsapo/gabrielcsapo.com#info=devDependencies)
 
 ## Install
 
