@@ -50,6 +50,8 @@ module.exports = function(grunt) {
                 options: {
                     path: './screenshots/index',
                     files: [{
+                        compress: true,
+                        parallel: true,
                         type: 'local',
                         path: '.',
                         port: 8000,
@@ -57,7 +59,7 @@ module.exports = function(grunt) {
                         dest: "index.png",
                         delay: 300
                     }],
-                    viewport: ['1920x1080', '1024x768', '640x960', '320x480']
+                    viewport: ['1920x1080', '1024x768', '640x960', '375x667', '320x480']
                 }
             }
         }

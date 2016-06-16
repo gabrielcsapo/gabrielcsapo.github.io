@@ -13,6 +13,12 @@ html, body {
     }
 }
 
+@media (max-width: 375) {
+    .quote-container {
+        height: 230px !important;
+    }
+}
+
 @media (max-width: 320) {
     .quote-container {
         height: 230px !important;

@@ -23,7 +23,7 @@
     "grunt-contrib-imagemin": "^1.0.1",
     "grunt-contrib-pug": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-screenshot": "^0.1.0",
+    "grunt-screenshot": "^0.4.0",
     "psychic-ui": "0.0.1"
   }
 }
