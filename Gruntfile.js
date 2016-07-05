@@ -3,7 +3,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-pug');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
 
     grunt.initConfig({
         pug: {
@@ -14,26 +13,16 @@ module.exports = function(grunt) {
                     }
                 },
                 files: {
-                    'index.html': ['public/index.jade']
+                    'index.html': ['public/index.pug']
                 }
             }
         },
         watch: {
             scripts: {
-                files: ['**/*.jade'],
+                files: ['**/*.pug', '**/*.css', '**/*.js'],
                 tasks: ['pug'],
                 options: {
                     spawn: false,
-                }
-            }
-        },
-        imagemin: {
-            static: {
-                options: {
-                    optimizationLevel: 3
-                },
-                files: {
-                    'public/assets/background.png': 'public/assets/background-raw.png',
                 }
             }
         },
@@ -59,7 +48,7 @@ module.exports = function(grunt) {
                         dest: "index.png",
                         delay: 300
                     }],
-                    viewport: ['1920x1080', '1024x768', '640x960', '375x667', '320x480']
+                    viewport: ['1920x1080', '1024x768', '640x960', '720x562', '375x667', '320x480']
                 }
             }
         }
