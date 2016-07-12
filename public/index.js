@@ -1,10 +1,12 @@
 var d3 = require('d3');
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    var width = screen.width,
-        height = 500;
+    var width = screen.width / 2.5;
+    var height = screen.height / 1.35;
 
-    var svg = d3.select("body").append("svg")
+    var svg = d3.select("body")
+        .append("svg")
+        .attr("class", "directed-graph")
         .attr("width", width)
         .attr("height", height);
 

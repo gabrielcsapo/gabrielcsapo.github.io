@@ -32,11 +32,9 @@ module.exports = function(grunt) {
                     files: [{
                         compress: true,
                         parallel: true,
-                        type: 'local',
-                        path: '.',
-                        port: 8000,
-                        src: "index.html",
-                        dest: "index.png",
+                        type: 'remote',
+                        src: 'http://localhost:8080',
+                        dest: 'index.png',
                         delay: 1000
                     }],
                     viewport: ['1920x1080', '1024x768', '640x960', '720x562', '375x667', '320x480']
