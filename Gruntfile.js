@@ -29,13 +29,16 @@ module.exports = function(grunt) {
             index: {
                 options: {
                     path: './screenshots/index',
+                    maxParallel: 100,
                     files: [{
-                        compress: true,
                         parallel: true,
                         type: 'remote',
+                        video: {
+                            time: '65'
+                        },
                         src: 'http://localhost:8080',
-                        dest: 'index.png',
-                        delay: 1000
+                        dest: 'index.gif',
+                        delay: 5
                     }],
                     viewport: ['1920x1080', '1024x768', '640x960', '720x562', '375x667', '320x480']
                 }
