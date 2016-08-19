@@ -2,6 +2,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-screenshot');
     grunt.loadNpmTasks('grunt-contrib-pug');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-concurrent');
 
     grunt.initConfig({
         pug: {
@@ -16,12 +18,27 @@ module.exports = function(grunt) {
                 }
             }
         },
+        connect: {
+            server: {
+                options: {
+                    port: 8000,
+                    hostname: '*'
+                }
+            },
+            keepalive: {
+                options: {
+                    keepalive: true,
+                    port: 8000,
+                    hostname: '*'
+                }
+            }
+        },
         watch: {
             scripts: {
                 files: ['**/*.pug', '**/*.css', '**/*.js'],
                 tasks: ['pug'],
                 options: {
-                    spawn: false,
+                    spawn: true,
                 }
             }
         },
@@ -36,7 +53,7 @@ module.exports = function(grunt) {
                         video: {
                             time: '65'
                         },
-                        src: 'http://localhost:8080',
+                        src: 'http://localhost:8000',
                         dest: 'index.gif',
                         delay: 5
                     }],
@@ -47,6 +64,7 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('dev', ['watch']);
-    grunt.registerTask('default', ['pug', 'screenshot']);
+    grunt.registerTask('server', ['connect:keepalive'])
+    grunt.registerTask('default', ['connect', 'pug', 'screenshot']);
 
 };

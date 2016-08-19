@@ -15,6 +15,7 @@ npm install;
 
 ```
 grunt dev;
+grunt server;
 open http://localhost:8000;
 ```
 
