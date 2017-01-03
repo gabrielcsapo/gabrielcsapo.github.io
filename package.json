@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/gabrielcsapo/site#readme",
   "devDependencies": {
-    "d3": "^3.5.17",
+    "d3": "^4.4.0",
     "grunt": "^1.0.1",
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-pug": "^1.0.0",

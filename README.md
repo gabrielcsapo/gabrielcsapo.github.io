@@ -19,6 +19,8 @@ grunt server;
 open http://localhost:8000;
 ```
 
+![site](./screenshots/index/remote-1024x768-index.gif)
+
 ## Contributions
 
 > all contributions are welcome and wanted!

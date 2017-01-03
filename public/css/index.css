@@ -6,12 +6,12 @@ html, body {
     height: 100%;
 }
 .node {
-  stroke: #fff;
+  stroke: #dedede;
   stroke-width: 1.5px;
 }
 
-.link {
-  stroke: #999;
+.links {
+  stroke: #dedede;
   stroke-opacity: .6;
 }
 .btn.btn-black {
@@ -28,7 +28,10 @@ svg.directed-graph {
     left: 0;
     bottom: 0;
     right: 0;
-    z-index: -1;
+    z-index: 0;
+}
+.quote-container {
+    z-index: 100;
 }
 @media(max-width: 860) {
     .quote-container {

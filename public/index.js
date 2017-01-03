@@ -1,98 +1,93 @@
 var d3 = require('d3');
 
-document.addEventListener("DOMContentLoaded", function(event) {
-    var width = window.innerWidth / 2.5;
-    var height = window.innerHeight / 1.35;
+var generateGraph = function(width, height) {
+    var nodes = [];
+    var numberOfNodes = width * 0.21;
+    var numberOfGroups = width * 0.008;
 
-    var svg = d3.select(".quote-container")
-        .append("svg")
-        .attr("class", "directed-graph")
+    for (var i = 0; i < numberOfNodes; i++) {
+        nodes.push({
+            id: i,
+            group: Math.floor(Math.random() * numberOfGroups),
+            r: Math.floor(Math.random() * 5)
+        });
+    }
+
+    var links = [];
+
+    for (var i = 0; i < nodes.length; i++) {
+        var many = nodes[i].group * 0.75;
+        while (many > 0) {
+            links.push({
+                source: nodes[i].id,
+                target: nodes[Math.floor(Math.random() * nodes.length)].id
+            });
+            many -= 1;
+        }
+    };
+
+    return {
+        nodes: nodes,
+        links: links
+    };
+}
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    var width = window.innerWidth - 50;
+    var height = window.innerHeight / 1.35;
+    var svg = d3.select("svg")
         .attr("width", width)
         .attr("height", height);
+    var color = d3.scaleOrdinal(d3.schemeCategory20);
+    var graph = generateGraph(width, height);
 
-    var colors = d3.scale.category20();
+    var simulation = d3.forceSimulation()
+        .force("link", d3.forceLink().id(function(d) {
+            return d.id;
+        }))
+        .force("charge", d3.forceManyBody())
+        .force("center", d3.forceCenter(width / 2, height / 2));
 
-    var force = d3.layout.force()
-        .charge(-50)
-        .linkDistance(35)
-        .size([width, height]);
-
-    var n = width / 3; // number of nodes
-    var m = n / 2; // number of links
-    var charge = -50;
-
-    var graph = {};
-
-    graph.nodes = d3.range(n).map(Object);
-    var list = randomChoose(unorderedPairs(d3.range(n)), m);
-    graph.links = list.map(function(a) {
-        return {
-            source: a[0],
-            target: a[1]
-        }
-    });
-
-    function randomChoose(s, k) { // returns a random k element subset of s
-        var a = [],
-            i = -1,
-            j;
-        while (++i < k) {
-            j = Math.floor(Math.random() * s.length);
-            a.push(s.splice(j, 1)[0]);
-        };
-        return a;
-    }
-
-    function unorderedPairs(s) { // returns the list of all unordered pairs from s
-        var i = -1,
-            a = [],
-            j;
-        while (++i < s.length) {
-            j = i;
-            while (++j < s.length) a.push([s[i], s[j]])
-        };
-        return a;
-    }
-
-    force
-        .nodes(graph.nodes)
-        .links(graph.links)
-        .start();
-
-    var link = svg.selectAll(".link")
+    var link = svg.append("g")
+        .attr("class", "links")
+        .selectAll("line")
         .data(graph.links)
         .enter().append("line")
-        .attr("class", "link")
-        .style("stroke-width", function(d) {
+        .attr("stroke-width", function(d) {
             return Math.sqrt(d.value);
         });
 
-    var node = svg.selectAll(".node")
+    var node = svg.append("g")
+        .attr("class", "nodes")
+        .selectAll("circle")
         .data(graph.nodes)
         .enter().append("circle")
-        .attr("class", "node")
-        .attr("r", 5)
-        .style("fill", function(d) {
-            console.log(d);
-            return colors(d.group);
+        .attr("r", function(d, i) {
+            return d.r;
         })
-        .call(force.drag);
-
-    node.transition().duration(800)
-        .attr("r", function(d) {
-            return 3 + 3 * d.weight
+        .attr("fill", function(d) {
+            return color(d.group);
         })
-        .style("fill", function(d) {
-            return colors(d.weight)
-        });
+        .call(d3.drag()
+            .on("start", dragstarted)
+            .on("drag", dragged)
+            .on("end", dragended));
 
     node.append("title")
         .text(function(d) {
-            return d.name;
+            return d.id;
         });
 
-    force.on("tick", function() {
-        link.attr("x1", function(d) {
+    simulation
+        .nodes(graph.nodes)
+        .on("tick", ticked);
+
+    simulation.force("link")
+        .links(graph.links);
+
+    function ticked() {
+        link
+            .attr("x1", function(d) {
                 return d.source.x;
             })
             .attr("y1", function(d) {
@@ -105,11 +100,29 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 return d.target.y;
             });
 
-        node.attr("cx", function(d) {
+        node
+            .attr("cx", function(d) {
                 return d.x;
             })
             .attr("cy", function(d) {
                 return d.y;
             });
-    });
+    }
+
+    function dragstarted(d) {
+        if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+        d.fx = d.x;
+        d.fy = d.y;
+    }
+
+    function dragged(d) {
+        d.fx = d3.event.x;
+        d.fy = d3.event.y;
+    }
+
+    function dragended(d) {
+        if (!d3.event.active) simulation.alphaTarget(0);
+        d.fx = null;
+        d.fy = null;
+    }
 });
