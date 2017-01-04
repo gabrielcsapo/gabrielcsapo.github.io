@@ -5,8 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "grunt dev",
-    "build": "browserify public/index.js -o public/build.js",
-    "deploy": "git checkout master;git pull origin master;git checkout gh-pages;git pull origin master;git push origin gh-pages;git checkout master;"
+    "build": "browserify public/index.js -o public/build.js"
   },
   "author": "Gabriel Csapo <gacsapo@paypalcorp.com>",
   "license": "ISC",
@@ -20,6 +19,7 @@
   "homepage": "https://github.com/gabrielcsapo/site#readme",
   "devDependencies": {
     "d3": "^4.4.0",
+    "github-metrics": "^0.2.0",
     "grunt": "^1.0.1",
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-pug": "^1.0.0",
