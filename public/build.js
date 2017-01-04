@@ -16398,7 +16398,7 @@ var d3 = require('d3');
 
 var generateGraph = function(width, height) {
     var nodes = [];
-    var numberOfNodes = width * 0.21;
+    var numberOfNodes = width * 0.19;
     var numberOfGroups = width * 0.008;
 
     for (var i = 0; i < numberOfNodes; i++) {
@@ -16429,8 +16429,13 @@ var generateGraph = function(width, height) {
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
+    var fullScreen = document.querySelectorAll('.full-screen');
+    [].forEach.call(fullScreen, function(div) {
+      div.setAttribute("style", "position:relative;height:" + window.innerHeight + 'px;');
+    });
+
     var width = window.innerWidth - 50;
-    var height = window.innerHeight / 1.35;
+    var height = window.innerHeight / 1.15;
     var svg = d3.select("svg")
         .attr("width", width)
         .attr("height", height);
