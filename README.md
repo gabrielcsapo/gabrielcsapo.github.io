@@ -19,7 +19,7 @@ grunt server;
 open http://localhost:8000;
 ```
 
-![site](./screenshots/index/remote-1024x768-index.png)
+![site](./screenshots/remote-1024x768-index.png)
 
 ## Contributions
 
