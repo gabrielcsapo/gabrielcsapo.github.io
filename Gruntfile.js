@@ -69,8 +69,9 @@ module.exports = function(grunt) {
         githubMetrics({
             user: 'gabrielcsapo',
             token: GITHUB_TOKEN,
-            keys: ['full_name', 'commits', 'health', 'html_url'],
-            sort: 'commits'
+            keys: ['full_name', 'commits', 'health', 'html_url', 'days_stagnant'],
+            sort: 'days_stagnant',
+            sortAsc: true
         }, function(result) {
             var keys = [];
             var values = [];
@@ -78,8 +79,10 @@ module.exports = function(grunt) {
             result.forEach(function(o, i){
               values[i] = [];
               Object.keys(o).forEach(function(k) {
-                if(keys.indexOf(k) <= -1) { keys.push(k) };
-                values[i].push(JSON.stringify(o[k]));
+                if(k !== 'days_stagnant') {
+                    if(keys.indexOf(k) <= -1) { keys.push(k) };
+                    values[i].push(JSON.stringify(o[k]));
+                }
               });
             });
 
