@@ -1,13 +1,13 @@
 var d3 = require('d3');
 
-var generateGraph = function(width, height) {
+var generateGraph = function(width) {
     var nodes = [];
     var numberOfNodes = width * 0.19;
     var numberOfGroups = width * 0.008;
 
-    for (var i = 0; i < numberOfNodes; i++) {
+    for (var n = 0; i < numberOfNodes; n++) {
         nodes.push({
-            id: i,
+            id: n,
             group: Math.floor(Math.random() * numberOfGroups),
             r: Math.floor(Math.random() * 5)
         });
@@ -24,7 +24,7 @@ var generateGraph = function(width, height) {
             });
             many -= 1;
         }
-    };
+    }
 
     return {
         nodes: nodes,
@@ -32,7 +32,7 @@ var generateGraph = function(width, height) {
     };
 }
 
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function() {
     var fullScreen = document.querySelectorAll('.full-screen');
     [].forEach.call(fullScreen, function(div) {
       div.setAttribute("style", "position:relative;height:" + window.innerHeight + 'px;');
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         .attr("width", width)
         .attr("height", height);
     var color = d3.scaleOrdinal(d3.schemeCategory20);
-    var graph = generateGraph(width, height);
+    var graph = generateGraph(width);
 
     var simulation = d3.forceSimulation()
         .force("link", d3.forceLink().id(function(d) {
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         .selectAll("circle")
         .data(graph.nodes)
         .enter().append("circle")
-        .attr("r", function(d, i) {
+        .attr("r", function(d) {
             return d.r;
         })
         .attr("fill", function(d) {

@@ -80,7 +80,7 @@ module.exports = function(grunt) {
               values[i] = [];
               Object.keys(o).forEach(function(k) {
                 if(k !== 'days_stagnant') {
-                    if(keys.indexOf(k) <= -1) { keys.push(k) };
+                    if(keys.indexOf(k) <= -1) { keys.push(k) }
                     values[i].push(JSON.stringify(o[k]));
                 }
               });
