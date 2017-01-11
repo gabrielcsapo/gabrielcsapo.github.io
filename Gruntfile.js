@@ -116,6 +116,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('dev', ['watch']);
     grunt.registerTask('server', ['connect:keepalive']);
-    grunt.registerTask('default', ['connect:server', 'pug', 'screenshot']);
+    grunt.registerTask('build', ['connect:server', 'pug', 'screenshot'])
+    grunt.registerTask('default', ['build']);
 
 };

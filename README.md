@@ -25,4 +25,4 @@ open http://localhost:8000;
 
 > all contributions are welcome and wanted!
 
-before you submit a pr, please run `grunt` to update the screenshots directory
+before you submit a pr, please run `grunt build` to update the screenshots directory
