@@ -37,7 +37,7 @@ module.exports = function(grunt) {
         },
         watch: {
             scripts: {
-                files: ['public/*.pug'],
+                files: ['public/*.pug', 'public/css/*.css', 'public/index.js'],
                 tasks: ['pug'],
                 options: {
                     spawn: true,
@@ -72,7 +72,9 @@ module.exports = function(grunt) {
             keys: ['full_name', 'commits', 'health', 'html_url', 'days_stagnant'],
             sort: 'days_stagnant',
             sortAsc: true
-        }, function(result) {
+        }, function(err, result) {
+            if(err) throw err;
+            
             var keys = [];
             var values = [];
 

@@ -33,6 +33,10 @@ svg.directed-graph {
 .quote-container {
     z-index: 100;
 }
+.navbar {
+    padding-top:25px;
+    background-color: rgba(255, 255, 255, 1)
+}
 @media(max-width: 860) {
     .quote-container {
         height: 200px !important;
