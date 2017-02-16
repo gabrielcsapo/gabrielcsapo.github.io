@@ -2,18 +2,17 @@ var d3 = require('d3');
 
 var generateGraph = function(width) {
     var nodes = [];
-    var numberOfNodes = width * 0.19;
-    var numberOfGroups = width * 0.008;
+    var links = [];
+    var numberOfNodes = parseInt(width * 0.19) > 200 ? 200 : parseInt(width * 0.19);
+    var numberOfGroups = parseInt(width * 0.008) > 15 ? 15 : parseInt(width * 0.008);
 
-    for (var n = 0; i < numberOfNodes; n++) {
+    for (var n = 0; n < numberOfNodes; n++) {
         nodes.push({
             id: n,
             group: Math.floor(Math.random() * numberOfGroups),
             r: Math.floor(Math.random() * 5)
         });
     }
-
-    var links = [];
 
     for (var i = 0; i < nodes.length; i++) {
         var many = nodes[i].group * 0.75;

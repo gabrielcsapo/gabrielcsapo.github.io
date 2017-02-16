@@ -12,13 +12,14 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gabrielcsapo/site.git"
+    "url": "git+https://github.com/gabrielcsapo/gabrielcsapo.github.io.git"
   },
   "bugs": {
-    "url": "https://github.com/gabrielcsapo/site/issues"
+    "url": "https://github.com/gabrielcsapo/gabrielcsapo.github.io/issues"
   },
-  "homepage": "https://github.com/gabrielcsapo/site#readme",
+  "homepage": "https://github.com/gabrielcsapo/gabrielcsapo.github.io#readme",
   "devDependencies": {
+    "browserify": "^14.1.0",
     "d3": "^4.4.0",
     "eslint": "^3.14.0",
     "github-metrics": "^0.3.0",

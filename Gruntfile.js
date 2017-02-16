@@ -69,19 +69,19 @@ module.exports = function(grunt) {
         githubMetrics({
             user: 'gabrielcsapo',
             token: GITHUB_TOKEN,
-            keys: ['full_name', 'commits', 'health', 'html_url', 'days_stagnant'],
+            keys: ['full_name', 'description', 'commits', 'health', 'html_url', 'days_stagnant'],
             sort: 'days_stagnant',
             sortAsc: true
         }, function(err, result) {
             if(err) throw err;
-            
+
             var keys = [];
             var values = [];
 
             result.forEach(function(o, i){
               values[i] = [];
               Object.keys(o).forEach(function(k) {
-                if(k !== 'days_stagnant') {
+                if(k !== 'full_name') {
                     if(keys.indexOf(k) <= -1) { keys.push(k) }
                     values[i].push(JSON.stringify(o[k]));
                 }
@@ -89,7 +89,7 @@ module.exports = function(grunt) {
             });
 
             fs.writeFileSync('github-metrics.html', `
-              <table class="table" style="text-align:left;">
+              <table class="table responsive" style="text-align:left;">
                   <thead>
                     ${keys.map(function(k) {
                       return (`<th>${k}</th>`);
