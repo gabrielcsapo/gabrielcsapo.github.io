@@ -5,8 +5,8 @@
   "main": "index.html",
   "scripts": {
     "start": "grunt dev",
-    "lint": "./node_modules/.bin/eslint .",
-    "build": "browserify public/index.js -o public/build.js"
+    "lint": "eslint .",
+    "build": "webpack"
   },
   "author": "Gabriel Csapo <gacsapo@paypalcorp.com>",
   "license": "ISC",
@@ -19,15 +19,14 @@
   },
   "homepage": "https://github.com/gabrielcsapo/gabrielcsapo.github.io#readme",
   "devDependencies": {
-    "browserify": "^14.1.0",
     "d3": "^4.4.0",
     "eslint": "^3.14.0",
-    "github-metrics": "^0.3.0",
     "grunt": "^1.0.1",
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-pug": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-screenshot": "^0.6.0",
-    "psychic-ui": "^0.4.0"
+    "psychic-ui": "^1.0.2",
+    "webpack": "^2.2.1"
   }
 }
