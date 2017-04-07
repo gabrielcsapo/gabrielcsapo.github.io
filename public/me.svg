@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg version="1.1" x="0px" y="0px" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+    <style type="text/css">
+        .cup {
+            fill: #FFF;
+            stroke: #cccccc;
+            stroke-width: 2;
+            stroke-miterlimit: 10;
+            pointer-events: all;
+        }
+        .sleeve {
+            fill: #917a53;
+        }
+        .lid {
+            fill: #ffffff;
+            stroke: #cccccc;
+            stroke-width: 2;
+            stroke-miterlimit: 10;
+        }
+    </style>
+    <path class="cup" d="M301.4,382.2c-37.4,10.4-77.9,10.3-115.2-0.3c-8.1-66.7-16.1-131.6-24.5-193c55.1,0,110.1,0,165.2,0
+C318.1,250.3,309.8,315.3,301.4,382.2z"/>
+    <path class="sleeve" d="M310.2,334.2c-44,5.4-88.4,5.4-132.4,0c-3.2-27.8-6.4-55.7-9.6-83.6c50.4,7.2,101.6,7.2,152,0
+C316.9,278.4,313.5,306.3,310.2,334.2z"/>
+    <path class="lid" d="M337.2,187v13.8c0,0-15.8,3.7-92,3.7s-92-3.7-92-3.7V187c0-1.8,1.4-3.2,3.2-3.2h5.8v-11.5
+c0-3.6,2.9-6.5,6.5-6.5h131.8l3.4,2.2c1.1,0.7,2.5,0.7,3.7,0l3.7-2.2h10.9c3.3,0,6.1,2.7,6.1,6.1v11.9h5.8
+C335.8,183.8,337.2,185.2,337.2,187z"/>
+</svg>
