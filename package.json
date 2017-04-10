@@ -19,8 +19,8 @@
   },
   "homepage": "https://github.com/gabrielcsapo/gabrielcsapo.github.io#readme",
   "devDependencies": {
-    "d3": "^4.4.0",
-    "eslint": "^3.14.0",
+    "d3": "^4.7.4",
+    "eslint": "^3.19.0",
     "grunt": "^1.0.1",
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-pug": "^1.0.0",

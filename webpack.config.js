@@ -1,9 +1,10 @@
+const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: './public/index.js',
+  entry: path.resolve(__dirname, 'public', 'index.js'),
   output: {
-    path: './public',
+    path: path.resolve(__dirname, 'public'),
     filename: 'build.js'
   },
   plugins: [

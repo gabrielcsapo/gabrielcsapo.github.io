@@ -34,7 +34,7 @@ var generateGraph = function(width) {
 document.addEventListener("DOMContentLoaded", function() {
     var fullScreen = document.querySelectorAll('.full-screen');
     [].forEach.call(fullScreen, function(div) {
-      div.setAttribute("style", "position:relative;height:" + window.innerHeight + 'px;');
+      div.setAttribute("style", "position:relative;height:" + window.innerHeight - 100 + 'px;');
     });
 
     var width = window.innerWidth - 50;
