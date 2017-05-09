@@ -1,5 +1,3 @@
-const fs = require('fs');
-
 module.exports = (grunt) => {
     grunt.loadNpmTasks('grunt-screenshot');
     grunt.loadNpmTasks('grunt-contrib-pug');

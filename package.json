@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/gabrielcsapo/gabrielcsapo.github.io#readme",
   "devDependencies": {
-    "d3": "^4.7.4",
+    "d3": "^4.8.0",
     "eslint": "^3.19.0",
     "grunt": "^1.0.1",
     "grunt-contrib-connect": "^1.0.2",
@@ -27,6 +27,6 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-screenshot": "^0.6.0",
     "psychic-ui": "^1.0.2",
-    "webpack": "^2.2.1"
+    "webpack": "^2.5.1"
   }
 }
