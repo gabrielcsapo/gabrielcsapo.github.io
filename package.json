@@ -2,14 +2,6 @@
   "name": "site",
   "version": "0.0.0",
   "description": "personal website",
-  "main": "index.html",
-  "scripts": {
-    "start": "grunt dev",
-    "lint": "eslint .",
-    "build": "webpack"
-  },
-  "author": "Gabriel Csapo <gacsapo@paypalcorp.com>",
-  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gabrielcsapo/gabrielcsapo.github.io.git"
@@ -18,15 +10,21 @@
     "url": "https://github.com/gabrielcsapo/gabrielcsapo.github.io/issues"
   },
   "homepage": "https://github.com/gabrielcsapo/gabrielcsapo.github.io#readme",
+  "author": "Gabriel J. Csapo <gabecsapo@gmail.com>",
+  "license": "ISC",
+  "main": "index.html",
+  "scripts": {
+    "start": "grunt dev",
+    "lint": "eslint .",
+    "build": "grunt build"
+  },
   "devDependencies": {
-    "d3": "^4.8.0",
     "eslint": "^3.19.0",
     "grunt": "^1.0.1",
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-pug": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-screenshot": "^0.6.0",
-    "psychic-ui": "^1.0.2",
-    "webpack": "^2.5.1"
+    "psychic-ui": "^1.0.2"
   }
 }
