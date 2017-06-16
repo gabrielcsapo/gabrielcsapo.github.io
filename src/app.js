@@ -4,7 +4,9 @@ require('./index.css');
 var html = require('choo/html')
 var choo = require('choo')
 
-var app = choo()
+var app = choo({
+    href: false
+})
 app.route('/', mainView)
 app.mount('body')
 
@@ -22,7 +24,7 @@ function mainView (state, emit) {
                   <a href="https://www.github.com/gabrielcsapo" target="_blank" data-tooltip="Github" class="btn btn-black tooltip-bottom">
                     <i class="fa fa-github"></i>
                   </a>
-                  <a href="./dist/resume_summer_2017.pdf" data-tooltip="Resume" class="btn btn-black tooltip-bottom">
+                  <a href="dist/resume_summer_2017.pdf" target="_blank" data-tooltip="Resume" class="btn btn-black tooltip-bottom">
                     <i class="fa fa-suitcase"></i>
                   </a>
               </div>

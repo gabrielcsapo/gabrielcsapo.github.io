@@ -26,6 +26,7 @@
     "choo": "^5.6.2",
     "css-loader": "^0.28.4",
     "eslint": "^4.0.0",
+    "html-webpack-plugin": "^2.28.0",
     "psychic-ui": "^1.0.7",
     "style-loader": "^0.18.2",
     "webpack": "^2.6.1",

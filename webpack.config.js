@@ -1,10 +1,11 @@
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
     entry: './src/app.js',
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: __dirname,
         filename: 'build.js'
     },
     devServer: {
@@ -48,6 +49,11 @@ module.exports = {
                 booleans: true,
             }
         }),
-        new webpack.optimize.AggressiveMergingPlugin()
+        new webpack.optimize.AggressiveMergingPlugin(),
+        new HtmlWebpackPlugin({
+          template: 'src/index.html',
+          inject: 'body',
+          filename: 'index.html'
+        })
     ]
 };
