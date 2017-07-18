@@ -7,7 +7,7 @@ var choo = require('choo')
 var app = choo({
     href: false
 })
-app.route('/', mainView)
+app.route('*', mainView)
 app.mount('body')
 
 function mainView (state, emit) {
