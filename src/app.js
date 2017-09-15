@@ -24,7 +24,7 @@ function mainView (state, emit) {
                   <a href="https://www.github.com/gabrielcsapo" target="_blank" data-tooltip="Github" class="btn btn-black tooltip-bottom">
                     <i class="fa fa-github"></i>
                   </a>
-                  <a href="dist/resume_summer_2017.pdf" target="_blank" data-tooltip="Resume" class="btn btn-black tooltip-bottom">
+                  <a href="dist/gabriel_csapo.pdf" target="_blank" data-tooltip="Resume" class="btn btn-black tooltip-bottom">
                     <i class="fa fa-suitcase"></i>
                   </a>
               </div>
