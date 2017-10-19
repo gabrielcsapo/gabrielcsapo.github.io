@@ -1,36 +1,28 @@
-const phantom = require('phantom');
+const puppeteer = require('puppeteer');
 
-(async function() {
-    const instance = await phantom.create();
-    const page = await instance.createPage();
-    var viewports = [
-        [320, 480],
-        [375, 667],
-        [640, 990],
-        [720, 562],
-        [1024, 768],
-        [1920, 1080]
-    ];
+const viewports = [
+    [320, 480],
+    [375, 667],
+    [640, 990],
+    [720, 562],
+    [1024, 768],
+    [1920, 1080]
+];
 
-    for (var i = 0; i <= viewports.length; i++) {
-        var width = viewports[i][0];
-        var height = viewports[i][1];
-        var name = `./screenshots/${width}-${height}.png`;
+(async () => {
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+  await page.goto('http://localhost:5000/');
 
-        await page.property('viewportSize', {
-            width: width,
-            height: height
-        });
-        const status = await page.open('http://localhost:5000/');
-        console.log(`Page opened with status [${status}].`);
-        let response = await page.evaluate(function() {
-            console.log(document);
-            document.body.bgColor = 'white';
-        });
+  for (var i = 0; i <= viewports.length - 1; i++) {
+    var width = viewports[i][0];
+    var height = viewports[i][1];
+    var path = `./screenshots/${width}-${height}.png`;
 
-        await page.render(name);
-        console.log(`File created at ${name}`);
-    }
+    page.setViewport({ width, height });
 
-    await instance.exit(0);
-}());
+    await page.screenshot({ path });
+  }
+
+  await browser.close();
+})();
