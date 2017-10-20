@@ -14,10 +14,10 @@ class Layout extends React.Component {
               </div>
             </div>
           </div>
-          <div>
+          <div id="container-content">
           { children }
           </div>
-          <div className="navbar navbar-bottom navbar-center" style={{ paddingTop: "2px" }}>
+          <div className="navbar navbar-center">
               <div className="container text-center">
                 <a href="https://www.github.com/gabrielcsapo" target="_blank" rel="noopener noreferrer" data-tooltip="@gabrielcsapo" className="btn btn-black tooltip-top">
                     <img style={{ display:"inline-block", height: "25px" }} src="./dist/coffee.svg"/>

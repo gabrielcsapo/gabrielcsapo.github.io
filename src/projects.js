@@ -28,7 +28,7 @@ class Projects extends React.Component {
       "description": "📦 NPM dependency tracking server"
     }];
 
-    return (<div style={{ width: "80%", padding: "10px", margin: "0 auto", paddingBottom: "100px" }}>
+    return (<div style={{ width: "80%", padding: "10px", margin: "0 auto", paddingBottom: "25px" }}>
       <h3> Projects </h3>
       <small> These are a few projecst that I am passionate about at the moment, I have a few more that can be found <a href="https://github.com/gabrielcsapo">here</a></small>
       <br/>
