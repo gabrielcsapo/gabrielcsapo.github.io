@@ -4,7 +4,7 @@ const BabiliPlugin = require('babili-webpack-plugin');
 
 module.exports = {
   entry: {
-    vendor: ['react', 'react-dom'],
+    vendor: ['react', 'react-dom', 'react-router-dom'],
     app: './src/app.js'
   },
   output: {
@@ -16,9 +16,7 @@ module.exports = {
     port: 5000,
     contentBase: './dist',
     inline: true,
-    historyApiFallback: {
-      index: __dirname + '/index.html'
-    }
+    historyApiFallback: true
   },
   module: {
     rules: [{

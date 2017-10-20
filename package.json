@@ -16,7 +16,7 @@
     "lint": "eslint .",
     "test": "node ./screenshots/screenshot.js",
     "build": "webpack --progress",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server --hot"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -34,6 +34,7 @@
     "puppeteer": "^0.12.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-router-dom": "^4.2.2",
     "style-loader": "^0.18.2",
     "url-loader": "^0.6.2",
     "webpack": "^3.5.6",
