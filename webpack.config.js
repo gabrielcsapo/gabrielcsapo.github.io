@@ -14,9 +14,15 @@ module.exports = {
   },
   devServer: {
     port: 5000,
-    contentBase: './dist',
+    contentBase: './',
     inline: true,
     historyApiFallback: true
+  },
+  resolve: {
+      alias: {
+          'react': 'preact-compat',
+          'react-dom': 'preact-compat'
+      }
   },
   module: {
     rules: [{

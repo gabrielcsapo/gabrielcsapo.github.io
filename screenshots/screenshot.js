@@ -17,7 +17,19 @@ const viewports = [
   for (var i = 0; i <= viewports.length - 1; i++) {
     var width = viewports[i][0];
     var height = viewports[i][1];
-    var path = `./screenshots/${width}-${height}.png`;
+    var path = `./screenshots/main/${width}-${height}.png`;
+
+    page.setViewport({ width, height });
+
+    await page.screenshot({ path });
+  }
+
+  await page.goto('http://localhost:5000/#/projects');
+
+  for (var i = 0; i <= viewports.length - 1; i++) {
+    var width = viewports[i][0];
+    var height = viewports[i][1];
+    var path = `./screenshots/projects/${width}-${height}.png`;
 
     page.setViewport({ width, height });
 
