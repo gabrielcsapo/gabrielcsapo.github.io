@@ -26,6 +26,12 @@ class Projects extends React.Component {
     }, {
       "name": "starbuck",
       "description": "📦 NPM dependency tracking server"
+    }, {
+      "name": "psychic.css",
+      "description": "🔮 already styled before you know it"
+    }, {
+      "name": "css-commons",
+      "description": "👨‍👨‍👧‍👧 let's make our css a family again"
     }];
 
     return (<div style={{ width: "80%", padding: "10px", margin: "0 auto", paddingBottom: "25px" }}>

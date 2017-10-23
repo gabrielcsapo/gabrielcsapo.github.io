@@ -15,8 +15,8 @@
   "scripts": {
     "lint": "eslint .",
     "test": "node ./screenshots/screenshot.js",
-    "build": "webpack --progress",
-    "dev": "webpack-dev-server --hot"
+    "build": "NODE_ENV=production webpack --progress",
+    "dev": "webpack-dev-server --hot --inline"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -32,7 +32,7 @@
     "html-webpack-plugin": "^2.30.1",
     "preact": "^8.2.5",
     "preact-compat": "^3.17.0",
-    "psychic-ui": "^1.0.7",
+    "psychic.css": "0.0.1",
     "puppeteer": "^0.12.0",
     "style-loader": "^0.19.0",
     "url-loader": "^0.6.2",

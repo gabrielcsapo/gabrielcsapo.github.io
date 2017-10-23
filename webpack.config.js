@@ -2,7 +2,7 @@ const webpack = require('webpack');
 
 const BabiliPlugin = require('babili-webpack-plugin');
 
-module.exports = {
+const config = {
   entry: {
     vendor: ['react', 'react-dom', 'react-router-dom'],
     app: './src/app.js'
@@ -66,7 +66,12 @@ module.exports = {
         'NODE_ENV': process.env.NODE_ENV ? `"${process.env.NODE_ENV}"` : JSON.stringify('production')
       }
     }),
-    new BabiliPlugin(),
     new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.bundle.js', minChunks: Infinity })
   ]
 };
+
+if(process.env.NODE_ENV === 'production') {
+  config.plugins.push(new BabiliPlugin());
+}
+
+module.exports = config;

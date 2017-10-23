@@ -8,14 +8,6 @@ html, body, #root {
   width: 100%;
 }
 
-.btn.btn-black {
-  vertical-align: middle;
-}
-
-.btn.btn-black:hover {
-  background-color: rgb(75, 75, 75);
-}
-
 .tooltip:after, [data-tooltip]:after {
   border-radius: 5px;
 }
