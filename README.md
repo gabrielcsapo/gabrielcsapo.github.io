@@ -2,7 +2,7 @@
 
 > ☕️ personal website (www.gabrielcsapo.com)
 
-[![Dependency Status](https://david-dm.org/gabrielcsapo/gabrielcsapo.com.svg)](https://david-dm.org/gabrielcsapo/gabrielcsapo.com) [![devDependency Status](https://david-dm.org/gabrielcsapo/gabrielcsapo.com/dev-status.svg)](https://david-dm.org/gabrielcsapo/gabrielcsapo.com#info=devDependencies)
+[![Dependency Status](https://starbuck.gabrielcsapo.com/badge/github/gabrielcsapo/gabrielcsapo.com/status.svg)](https://starbuck.gabrielcsapo.com/github/gabrielcsapo/gabrielcsapo.com) [![devDependency Status](https://starbuck.gabrielcsapo.com/badge/github/gabrielcsapo/gabrielcsapo.com/dev-status.svg)](https://starbuck.gabrielcsapo.com/github/gabrielcsapo/gabrielcsapo.com#info=devDependencies)
 
 ## Install
 
@@ -17,7 +17,7 @@ npm run dev;
 open http://localhost:5000;
 ```
 
-![site](./screenshots/1024-768.png)
+![site](./screenshots/main/1024-768.png)
 
 ## Contributions
 
