@@ -2,7 +2,6 @@ import './index.css';
 import 'psychic.css/dist/psychic.min.css';
 import 'font-awesome/css/font-awesome.css';
 
-import React from 'react';
 import { render } from 'react-dom';
 
 import routes from './router';

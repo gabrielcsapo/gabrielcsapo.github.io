@@ -12,24 +12,24 @@ const viewports = [
 (async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-  await page.goto('http://localhost:5000/');
+  await page.goto('http://localhost:8080/');
 
-  for (var i = 0; i <= viewports.length - 1; i++) {
-    var width = viewports[i][0];
-    var height = viewports[i][1];
-    var path = `./screenshots/main/${width}-${height}.png`;
+  for (let i = 0; i <= viewports.length - 1; i++) {
+    let width = viewports[i][0];
+    let height = viewports[i][1];
+    let path = `./screenshots/main/${width}-${height}.png`;
 
     page.setViewport({ width, height });
 
     await page.screenshot({ path });
   }
+  
+  await page.goto('http://localhost:8080/#/projects');
 
-  await page.goto('http://localhost:5000/#/projects');
-
-  for (var i = 0; i <= viewports.length - 1; i++) {
-    var width = viewports[i][0];
-    var height = viewports[i][1];
-    var path = `./screenshots/projects/${width}-${height}.png`;
+  for (let i = 0; i <= viewports.length - 1; i++) {
+    let width = viewports[i][0];
+    let height = viewports[i][1];
+    let path = `./screenshots/projects/${width}-${height}.png`;
 
     page.setViewport({ width, height });
 

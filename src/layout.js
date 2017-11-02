@@ -1,7 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Layout extends React.Component {
   render() {
+    const { hash='' } = location;
     const { children } = this.props;
 
     return (<div id="container">
@@ -9,7 +11,11 @@ class Layout extends React.Component {
             <div className="container">
               <div className="navbar-title">
                 <a href="#" className="text-black">
-                  <span>Gabriel J. Csapo</span>
+                  { hash === '' || hash === '#/' || hash === '#' ?
+                    <span>Gabriel J. Csapo</span>
+                  :
+                    <span>Main</span>
+                  }
                 </a>
               </div>
             </div>
@@ -27,5 +33,9 @@ class Layout extends React.Component {
       </div>);
   }
 }
+
+Layout.propTypes = {
+  children: PropTypes.array
+};
 
 export default Layout;
