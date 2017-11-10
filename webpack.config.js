@@ -5,25 +5,26 @@ const BabiliPlugin = require('babili-webpack-plugin');
 const got = require('got');
 
 async function getProjects() {
-  const res = await got('https://api.github.com/users/gabrielcsapo/repos', {
+  const res = await got('https://api.github.com/users/gabrielcsapo/repos?type=public&per_page=100', {
     json: true,
     headers: {
       'Accept': 'application/vnd.github.mercy-preview+json'
     }
   });
   return res.body.filter((repo) => {
-    return repo.topics.indexOf('deprecated') == -1 && repo.fork === false
+    return repo.name, repo.topics && repo.topics.indexOf('deprecated') == -1 && repo.fork == false;
   }).map((repo) => {
     return {
       description: repo.description,
       html_url: repo.html_url,
       homepage: repo.homepage,
-      name: repo.name
+      name: repo.name,
+      stars: repo.stargazers_count,
+      forks: repo.forks,
+      topics: repo.topics
     }
   });
 }
-
-
 
 module.exports = async function() {
   const projects = await getProjects();
@@ -35,20 +36,13 @@ module.exports = async function() {
     },
     output: {
       path: __dirname + '/dist',
-      filename: 'bundle.js',
-      publicPath: './dist/'
+      filename: 'bundle.js'
     },
     devServer: {
       contentBase: 'dist',
       inline: true,
       hot: true,
       historyApiFallback: true
-    },
-    resolve: {
-      alias: {
-        'react': 'preact-compat',
-        'react-dom': 'preact-compat'
-      }
     },
     module: {
       rules: [{
@@ -103,6 +97,13 @@ module.exports = async function() {
 
   if (process.env.NODE_ENV === 'production') {
     config.plugins.push(new BabiliPlugin());
+    config.resolve = {
+      alias: {
+        'react': 'preact-compat',
+        'react-dom': 'preact-compat'
+      }
+    };
+    config.output.publicPath = './dist/';
   }
 
   return config;
