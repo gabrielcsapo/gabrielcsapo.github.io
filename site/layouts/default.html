@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page.title || site.title }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#317EFB"/>
+    <meta name="author" content="{{ site.author }}">
+    <meta name="description" content="{{ site.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ site.author }}">
+    <meta property="og:url" content="https://gabrielcsapo.com/">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@gabrielcsapo">
+    <meta name="twitter:creator" content="@gabrielcsapo">
+
+    {{ include("../assets/css/fontawesome.min.css") }}
+    {{ include("../assets/css/fa-brands.min.css") }}
+    {{ include("../assets/css/fa-solid.min.css") }}
+    {{ include("../assets/css/fa-regular.min.css") }}
+    {{ include("../../node_modules/psychic.css/dist/psychic.min.css") }}
+    {{ include("../index.css") }}
+  </head>
+  <body>
+    <div id="root">
+      <div id="container">
+        <div class="navbar">
+          <div class="container">
+            <div class="navbar-title">
+              <a href="index.html" class="text-black">
+                {{ site.author }}
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="container-content">
+          {{ content }}
+        </div>
+        <div class="navbar navbar-center">
+          <div class="container text-center">
+            <a href="https://www.github.com/gabrielcsapo" target="_blank" rel="noopener noreferrer" data-tooltip="@gabrielcsapo" class="btn btn-black tooltip-top">
+              {{ include("../assets/coffee.svg", {
+                "display":"inline-block",
+                "height":"25px"
+              })}}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

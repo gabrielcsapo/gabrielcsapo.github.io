@@ -14,13 +14,5 @@ npm install;
 
 ```
 npm run dev;
-open http://localhost:5000;
+open http://localhost:8080;
 ```
-
-![site](./screenshots/main/1024-768.png)
-
-## Contributions
-
-> all contributions are welcome and wanted!
-
-before you submit a pr, please run `npm run test` to update the screenshots directory

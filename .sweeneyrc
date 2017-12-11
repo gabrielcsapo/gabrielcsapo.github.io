@@ -1,0 +1,41 @@
+const got = require('got');
+
+async function getProjects() {
+  const res = await got('https://api.github.com/users/gabrielcsapo/repos?type=public&per_page=100', {
+    json: true,
+    headers: {
+      'Accept': 'application/vnd.github.mercy-preview+json'
+    }
+  });
+  return res.body.filter((repo) => {
+    return repo.name, repo.topics && repo.topics.indexOf('deprecated') == -1 && repo.fork == false;
+  }).map((repo) => {
+    return {
+      description: repo.description,
+      html_url: repo.html_url,
+      homepage: repo.homepage,
+      name: repo.name,
+      stars: repo.stargazers_count,
+      forks: repo.forks,
+      topics: repo.topics
+    }
+  });
+}
+
+module.exports = async function() {
+  const projects = await getProjects();
+
+  return {
+    output: './',
+    source: './site',
+    includes: [
+      "./site/assets/webfonts",
+      "./site/assets/gabriel_csapo.pdf"
+    ],
+    projects,
+    site: {
+      author: 'Gabriel J. Csapo',
+      description: 'Aspiring to be a human being'
+    }
+  }
+}
