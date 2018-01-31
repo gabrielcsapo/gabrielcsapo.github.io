@@ -20,8 +20,8 @@
     "node": ">= 8"
   },
   "devDependencies": {
-    "got": "^7.1.0",
+    "got": "^8.0.3",
     "psychic.css": "0.0.1",
-    "sweeney": "^0.1.1"
+    "sweeney": "^0.2.0"
   }
 }

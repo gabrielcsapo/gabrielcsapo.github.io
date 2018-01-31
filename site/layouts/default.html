@@ -32,6 +32,11 @@
                 {{ site.author }}
               </a>
             </div>
+            {{ (page.title || site.title) === 'Projects' ?
+              '<div class="nav text-black">
+                <a href="./index.html">Home</a>
+              </div>'
+            : '' }}
           </div>
         </div>
         <div id="container-content">
