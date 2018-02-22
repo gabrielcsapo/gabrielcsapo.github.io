@@ -1,7 +1,13 @@
+---
+{
+  "type": "layout"
+}
+---
+
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{ page.title || site.title }}</title>
+    <title>{{ options.title || site.title }}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#317EFB"/>
@@ -15,12 +21,13 @@
     <meta name="twitter:site" content="@gabrielcsapo">
     <meta name="twitter:creator" content="@gabrielcsapo">
 
-    {{ include("../assets/css/fontawesome.min.css") }}
-    {{ include("../assets/css/fa-brands.min.css") }}
-    {{ include("../assets/css/fa-solid.min.css") }}
-    {{ include("../assets/css/fa-regular.min.css") }}
-    {{ include("../../node_modules/psychic.css/dist/psychic.min.css") }}
-    {{ include("../index.css") }}
+    <link rel="stylesheet" href="./site/assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./site/assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./site/assets/css/fa-brands.min.css">
+    <link rel="stylesheet" href="./site/assets/css/fa-solid.min.css">
+    <link rel="stylesheet" href="./site/assets/css/fa-regular.min.css">
+    {{-- includes ../../node_modules/psychic.css/dist/psychic.min.css --}}
+    {{-- includes ../index.css --}}
   </head>
   <body>
     <div id="root">
@@ -32,7 +39,7 @@
                 {{ site.author }}
               </a>
             </div>
-            {{ (page.title || site.title) === 'Projects' ?
+            {{ (options.title || site.title) === 'Projects' ?
               '<div class="nav text-black">
                 <a href="./index.html">Home</a>
               </div>'
@@ -40,15 +47,12 @@
           </div>
         </div>
         <div id="container-content">
-          {{ content }}
+          {{ child }}
         </div>
         <div class="navbar navbar-center">
           <div class="container text-center">
             <a href="https://www.github.com/gabrielcsapo" target="_blank" rel="noopener noreferrer" data-tooltip="@gabrielcsapo" class="btn btn-black tooltip-top">
-              {{ include("../assets/coffee.svg", {
-                "display":"inline-block",
-                "height":"25px"
-              })}}
+              <img src="./site/assets/coffee.svg" style="display:inline-block;height:25px;"/>
             </a>
           </div>
         </div>

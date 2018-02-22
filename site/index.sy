@@ -1,6 +1,7 @@
 ---
 {
   "layout": "default",
+  "type": "page",
   "title": "Gabriel J. Csapo"
 }
 ---
@@ -18,7 +19,7 @@
   <a href="./projects.html" data-tooltip="Projects" class="btn btn-white tooltip-top">
     <i class="fas fa-map-signs"></i>
   </a>
-  <a href="./gabriel_csapo.pdf" target="_blank" rel="noopener noreferrer" data-tooltip="Resume" class="btn btn-white tooltip-bottom">
+  <a href="./site/assets/gabriel_csapo.pdf" target="_blank" rel="noopener noreferrer" data-tooltip="Resume" class="btn btn-white tooltip-bottom">
     <i class="fas fa-briefcase"></i>
   </a>
 </div>

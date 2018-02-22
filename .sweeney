@@ -28,10 +28,7 @@ module.exports = async function() {
   return {
     output: './',
     source: './site',
-    includes: [
-      "./site/assets/webfonts",
-      "./site/assets/gabriel_csapo.pdf"
-    ],
+    includes: [],
     projects,
     site: {
       author: 'Gabriel J. Csapo',
