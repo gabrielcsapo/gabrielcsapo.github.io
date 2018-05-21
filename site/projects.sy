@@ -7,23 +7,40 @@
 ---
 
 <div style="width:80%;margin:0 auto;">
-  <ul class="list" style="width:auto;">
-    {{ projects.map((project, i) => {
-      const { description, name, homepage, html_url, topics, stars, forks } = project;
+  <ul class="list">
+    {{ products.map((product, i) => {
+      const { description, language, name, homepage, html_url, topics, stars, forks } = product;
 
-      return (`<li class="list-item text-left">
-        <a href="${ homepage || html_url }">
-          <span style="padding:0;margin:0;">
+      return (`<li class="product-list-item">
+        <a class="list-item__link" href="${ homepage || html_url }">
+          <span class="list-item__link-name">
             ${ name }
-            <small class="text-black" style="font-weight:300">
-            &nbsp;&nbsp;${ description }
-            </small>
           </span>
+          </br>
+          <div class="list-item__description">
+          &nbsp;&nbsp;${ description }
+          </div>
+          ${ language ? `<div class="language-block"><span class="language language-${language}"></span>&nbsp;<span>${language}</span></div>` : '' }
         </a>
+      </li>`);
+    }).join('\n')
+  }}
+  </ul>
 
-        <div class="badge badge-white" style="font-weight:100">
-          ${ topics.join(', ') }
-        </div>
+  <ul class="list">
+    {{ utilities.map((utility, i) => {
+      const { description, name, homepage, html_url, topics, stars, forks } = utility;
+
+      return (`<li class="utility-list-item">
+        <a class="list-item__link" href="${ homepage || html_url }">
+          <span class="list-item__link-name">
+            ${ name }
+          </span>
+
+          <small style="font-weight:300">
+            &nbsp;&nbsp;${ description }
+          </small>
+        </a>
       </li>`);
     }).join('\n')
   }}

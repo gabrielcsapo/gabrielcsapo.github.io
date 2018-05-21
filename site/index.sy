@@ -7,6 +7,9 @@
 ---
 
 <div style="width:100%;top:50%;transform:translateY(-50%);position:absolute;">
+  <h4> Gabriel J. Csapo </h4>
+  <h5 style="font-weight:300;"> Open-Sourcerer & Aspiring Designer </h5>
+
   <a href="https://twitter.com/gabriel_csapo" target="_blank" rel="noopener noreferrer" style="margin-right: 5px;" data-tooltip="Twitter" class="btn btn-white tooltip-bottom">
     <i class="fab fa-twitter"></i>
   </a>

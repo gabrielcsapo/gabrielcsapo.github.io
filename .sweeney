@@ -1,6 +1,6 @@
 const got = require('got');
 
-async function getProjects() {
+async function getRepos() {
   const res = await got('https://api.github.com/users/gabrielcsapo/repos?type=public&per_page=100', {
     json: true,
     headers: {
@@ -13,6 +13,7 @@ async function getProjects() {
     return {
       description: repo.description,
       html_url: repo.html_url,
+      language: repo.language,
       homepage: repo.homepage,
       name: repo.name,
       stars: repo.stargazers_count,
@@ -23,13 +24,17 @@ async function getProjects() {
 }
 
 module.exports = async function() {
-  const projects = await getProjects();
+  const repos = await getRepos();
+
+  const products = repos.filter((r) => r.topics.indexOf('product') > -1)
+  const utilities = repos.filter((r) => r.topics.indexOf('utility') > -1)
 
   return {
     output: './',
     source: './site',
     includes: [],
-    projects,
+    utilities,
+    products,
     site: {
       author: 'Gabriel J. Csapo',
       description: 'Aspiring to be a human being'
