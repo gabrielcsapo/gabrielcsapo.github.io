@@ -22,6 +22,9 @@
   <a href="./projects.html" data-tooltip="Projects" class="btn btn-white tooltip-top">
     <i class="fas fa-map-signs"></i>
   </a>
+  <a href="https://github.com/gabrielcsapo-graveyard" data-tooltip="Project Graveyard" class="btn btn-white tooltip-top">
+    <i class="fas fa-archive"></i>
+  </a>
   <a href="./site/assets/gabriel_csapo.pdf" target="_blank" rel="noopener noreferrer" data-tooltip="Resume" class="btn btn-white tooltip-bottom">
     <i class="fas fa-briefcase"></i>
   </a>
