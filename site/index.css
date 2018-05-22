@@ -21,6 +21,14 @@ html, body, #root {
   flex: 1;
 }
 
+.stars-block {
+  font-size: 12px;
+}
+
+.stars-block > .stars-block__star {
+  color: rgb(88, 88, 88);
+}
+
 .language-block {
   font-size: 12px;
   position: absolute;
@@ -95,6 +103,14 @@ html, body, #root {
 
 .product-list-item:hover > .list-item__topics {
   display: block;
+}
+
+.product-list-item > .list-item__link > .stars-block {
+  position: absolute;
+  right: 5px;
+  bottom: 0;
+  margin-bottom: 5px;
+  vertical-align: middle;
 }
 
 .utility-list-item {

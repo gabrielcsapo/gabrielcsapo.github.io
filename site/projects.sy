@@ -20,6 +20,7 @@
           <div class="list-item__description">
           &nbsp;&nbsp;${ description }
           </div>
+          ${ stars ? `<div class="stars-block">${ stars }<span class="fa fa-star stars-block__star"></span></div>` : '' }
           ${ language ? `<div class="language-block"><span class="language language-${language}"></span>&nbsp;<span>${language}</span></div>` : '' }
         </a>
       </li>`);
@@ -29,7 +30,7 @@
 
   <ul class="list">
     {{ utilities.map((utility, i) => {
-      const { description, name, homepage, html_url, topics, stars, forks } = utility;
+      const { description, name, homepage, html_url, topics, stars } = utility;
 
       return (`<li class="utility-list-item">
         <a class="list-item__link" href="${ homepage || html_url }">
@@ -40,6 +41,7 @@
           <small style="font-weight:300">
             &nbsp;&nbsp;${ description }
           </small>
+          ${ stars ? `<span class="stars-block">${ stars }<span class="fa fa-star stars-block__star"></span></span>` : '' }
         </a>
       </li>`);
     }).join('\n')
