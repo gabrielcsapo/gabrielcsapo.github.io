@@ -41,7 +41,7 @@
           <small style="font-weight:300">
             &nbsp;&nbsp;${ description }
           </small>
-          ${ stars ? `<span class="stars-block">${ stars }<span class="fa fa-star stars-block__star"></span></span>` : '' }
+          ${ stars ? ` - <span class="stars-block">${ stars }<span class="fa fa-star stars-block__star"></span></span>` : '' }
         </a>
       </li>`);
     }).join('\n')
