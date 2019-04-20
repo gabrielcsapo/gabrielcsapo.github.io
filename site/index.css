@@ -19,25 +19,22 @@ html, body, #root {
 
 #container-content {
   flex: 1;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
-.img-centered--absolute {
-  position: absolute;
-  right: 0;
-  left: 0;
-  top: -50%;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: -1;
+.featured-card {
+  text-align: center;
+
+  width: 200px;
+  height: 200px;
 }
 
-.img-text {
-  color: rgba(0,0,0,.60);
-  border-radius: 2px;
-  background: rgba(229, 227, 235, 0.65);
-  width: auto;
-  padding: 3px;
-  display: inline-block;
+.featured-card > .product-list-item {
+  height: 125px;
+  width: 125px;
 }
 
 .btn.btn-white {

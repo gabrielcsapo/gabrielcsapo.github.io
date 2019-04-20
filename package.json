@@ -14,7 +14,7 @@
   "author": "Gabriel J. Csapo <gabecsapo@gmail.com>",
   "scripts": {
     "build": "sweeney build",
-    "dev": "sweeney serve --watch --port 8080"
+    "serve": "sweeney serve --watch --port 8080"
   },
   "engines": {
     "node": ">= 8"
@@ -22,6 +22,6 @@
   "devDependencies": {
     "got": "^9.6.0",
     "psychic.css": "0.0.1",
-    "sweeney": "^1.4.0"
+    "sweeney": "^1.4.1"
   }
 }

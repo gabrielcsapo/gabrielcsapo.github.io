@@ -6,28 +6,31 @@
 }
 ---
 
-<div style="width:100%;top:50%;transform:translateY(-50%);position:absolute;">
-  <img class="img-centered--absolute" src="./site/assets/background.png"/>
-  <h4 class="img-text"> Gabriel J. Csapo </h4>
+<div>
+  <h4> Gabriel J. Csapo </h4>
+
+  <img src="./site/assets/background.png" style="max-width:500px;width:100%;"/>
+
   <br/>
-  <h5 class="img-text" style="font-weight:300;"> Open-Sourcerer & Aspiring Designer </h5>
-  <br/>
-  <a href="https://twitter.com/gabriel_csapo" target="_blank" rel="noopener noreferrer" style="margin-right: 5px;" data-tooltip="Twitter" class="btn btn-white tooltip-bottom">
-    <i class="fab fa-twitter"></i>
-  </a>
-  <a href="https://www.linkedin.com/in/gabrielcsapo" target="_blank" rel="noopener noreferrer" style="margin-right: 5px;" data-tooltip="Linkedin" class="btn btn-white tooltip-top">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-  <a href="https://www.github.com/gabrielcsapo" target="_blank" rel="noopener noreferrer" data-tooltip="Github" class="btn btn-white tooltip-bottom">
-    <i class="fab fa-github"></i>
-  </a>
-  <a href="./projects.html" data-tooltip="Projects" class="btn btn-white tooltip-top">
-    <i class="fas fa-map-signs"></i>
-  </a>
-  <a href="https://github.com/gabrielcsapo-graveyard" data-tooltip="Project Graveyard" class="btn btn-white tooltip-top">
-    <i class="fas fa-archive"></i>
-  </a>
-  <a href="./site/assets/gabriel_csapo.pdf" target="_blank" rel="noopener noreferrer" data-tooltip="Resume" class="btn btn-white tooltip-bottom">
-    <i class="fas fa-briefcase"></i>
-  </a>
+
+  <div>
+    <a href="https://twitter.com/gabriel_csapo" target="_blank" rel="noopener noreferrer" style="margin-right: 5px;" data-tooltip="Twitter" class="btn btn-white tooltip-bottom">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/gabrielcsapo" target="_blank" rel="noopener noreferrer" style="margin-right: 5px;" data-tooltip="Linkedin" class="btn btn-white tooltip-top">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="https://www.github.com/gabrielcsapo" target="_blank" rel="noopener noreferrer" data-tooltip="Github" class="btn btn-white tooltip-bottom">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="./projects.html" data-tooltip="Projects" class="btn btn-white tooltip-top">
+      <i class="fas fa-map-signs"></i>
+    </a>
+    <a href="https://github.com/gabrielcsapo-graveyard" data-tooltip="Project Graveyard" class="btn btn-white tooltip-top">
+      <i class="fas fa-archive"></i>
+    </a>
+    <a href="./site/assets/gabriel_csapo.pdf" target="_blank" rel="noopener noreferrer" data-tooltip="Resume" class="btn btn-white tooltip-bottom">
+      <i class="fas fa-briefcase"></i>
+    </a>
+  </div>
 </div>

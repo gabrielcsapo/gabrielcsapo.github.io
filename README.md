@@ -13,6 +13,6 @@ npm install;
 ## Usage
 
 ```
-npm run dev;
+npm run serve;
 open http://localhost:8080;
 ```

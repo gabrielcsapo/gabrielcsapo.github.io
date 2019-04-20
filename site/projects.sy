@@ -7,9 +7,44 @@
 ---
 
 <div style="width:80%;margin:0 auto;">
+  <div>
+      <div class="featured-card">
+        <h4> Benchmarking </h4>
+        <hr/>
+        {{
+          products
+            .filter((product, i) => product.name === 'titrate')
+            .map((product, i) => {
+              const { description, language, name, homepage, html_url, topics, stars, forks } = product;
+
+              return (`<li class="product-list-item">
+                <a class="list-item__link" href="${ homepage || html_url }">
+                  <span class="list-item__link-name">
+                    ${ name }
+                  </span>
+                  </br>
+                  <div class="list-item__description">
+                  &nbsp;&nbsp;${ description }
+                  </div>
+                  ${ stars ? `<div class="stars-block">${ stars }<span class="fa fa-star stars-block__star"></span></div>` : '' }
+                  ${ language ? `<div class="language-block"><span class="language language-${language}"></span>&nbsp;<span>${language}</span></div>` : '' }
+                </a>
+              </li>`);
+            }).join('\n')
+        }}
+      </div>
+  </div>
+
+  </br>
+  <hr/>
+  </br>
+
+  <h3 class="text-left"> Products </h3>
   <ul class="list">
     {{ products.map((product, i) => {
       const { description, language, name, homepage, html_url, topics, stars, forks } = product;
+
+      if(name === 'titrate') return;
 
       return (`<li class="product-list-item">
         <a class="list-item__link" href="${ homepage || html_url }">
@@ -28,6 +63,7 @@
   }}
   </ul>
 
+  <h3 class="text-left"> Utilities </h3>
   <ul class="list">
     {{ utilities.map((utility, i) => {
       const { description, name, homepage, html_url, topics, stars } = utility;
@@ -41,7 +77,7 @@
           <small style="font-weight:300">
             &nbsp;&nbsp;${ description }
           </small>
-          ${ stars ? ` - <span class="stars-block">${ stars }<span class="fa fa-star stars-block__star"></span></span>` : '' }
+          ${ stars ? ` | <span class="stars-block">${ stars }<span class="fa fa-star stars-block__star"></span></span>` : '' }
         </a>
       </li>`);
     }).join('\n')
